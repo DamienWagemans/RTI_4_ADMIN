@@ -37,10 +37,6 @@ public class Serveur_Carte extends javax.swing.JFrame {
         initComponents();        
         myProperties = Persistance_Properties.LoadProp(pathConfig);
 
-        
-        
-        
-        
         //recuperation du port dans l'objet properties
         port = Integer.parseInt(myProperties.getProperty("port_carte"));
         jLabel_port.setText(Integer.toString(port)); 

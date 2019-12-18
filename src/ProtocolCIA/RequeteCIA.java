@@ -10,6 +10,7 @@ import ClassesCIA.Login;
 import ClassesCIA.Reservation;
 import ClassesCIA.Ticket;
 import ClassesCIA.Voyageur;
+import Serveur_CheckIn.ThreadServeur;
 import interface_req_rep.Requete;
 import database.*;
 import static divers.Config_Applic.pathLogin;
@@ -44,6 +45,10 @@ public class RequeteCIA implements Requete , Serializable{
     private Object classe = null;
     private Properties myProperties;
     
+    //on va pouvoir acceder a la liste de client connecté pour ajouter ou suppriler celui qui vient de se 
+    // connecter ici
+    ThreadServeur threadServeur = null;
+    
      public RequeteCIA() 
     {
         myProperties = Persistance_Properties.LoadProp(pathLogin);
@@ -69,44 +74,79 @@ public class RequeteCIA implements Requete , Serializable{
     }
 
     @Override
-    public Runnable createRunnable(Socket s, Socket Sock_card, Statement instruc) {
+    public Runnable createRunnable(Socket s, Socket Sock_card, Statement instruc, ThreadServeur ts) {
         return new Runnable() 
         {
             public void run() {
-                TraitementRequete(s,Sock_card, instruc);
+                TraitementRequete(s,Sock_card, instruc, ts);
             }
         };
     }
     
-    public void TraitementRequete(Socket s, Socket Sock_card, Statement instruct) 
+    public void TraitementRequete(Socket s, Socket Sock_card, Statement instruct, ThreadServeur ts) 
     {
+        this.threadServeur = ts;
         int Login = 0;
+        
         try 
         {
-            
-            while(this.getTypeRequete() != -1)
+            System.err.println("Voici l'etat du serveur : "+ threadServeur.isServeur_en_pause());
+            //si le serveur est en pause, je refuse la connexion.
+            if(!threadServeur.isServeur_en_pause())
             {
-                while (Login == 0)
-                {
-                    Login = TraiterRequeteLogin(s, instruct);
-                    this.RecevoirRequete(s);
-                }
+                //j'ajoute l'addresse du client connecté a la liste de threadserver
+                threadServeur.getConnected_Clients().add(s.getRemoteSocketAddress().toString());
                 
-                switch(this.getTypeRequete())
+                while(this.getTypeRequete() != -1)
                 {
-                    case 2:
-                        TraiterRequeteBooking(s, instruct);
-                        break;
-                    case 3: 
-                        TraiterTicket(s,Sock_card, instruct);
-                        break;
-                    case 4:
-                        Creation_Voyageur(s, instruct);
-                      
-                }
-                this.RecevoirRequete(s);
+                    while (Login == 0)
+                    {
+                        Login = TraiterRequeteLogin(s, instruct);
+                        this.RecevoirRequete(s);
+                    }
+                    System.err.println("Type de la requete : " + this.getTypeRequete());
+                    switch(this.getTypeRequete())
+                    {
+                        case 2:
+                            TraiterRequeteBooking(s, instruct);
+                            break;
+                        case 3: 
+                            TraiterTicket(s,Sock_card, instruct);
+                            break;
+                        case 4:
+                            Creation_Voyageur(s, instruct);
+                            break;
 
-            } 
+
+                    }
+                    if(this.getTypeRequete() == -1)
+                    {
+                        break;
+                    }
+                    this.RecevoirRequete(s);
+                } 
+                System.out.println("Fin de connexion");
+                //je supprime le client connecté de la liste de string contenant les ip, j'ai recu l'id du client 
+                //je peux donc egalement le supprimer de la liste des socket connecté sur serveur secour
+                //je vais aller mettre l'id a -1 
+                for( int i = 0; i< threadServeur.TS.getSock_connected_clients().size(); i++)
+                {
+                    if(threadServeur.TS.getSock_connected_clients().get(i).getId() == (long)this.getObjectClasse())
+                    {
+                        System.out.println("Je met l'id a -1");
+                        threadServeur.TS.getSock_connected_clients().get(i).setId(-1);
+                        break;
+                    }
+                }
+                threadServeur.getConnected_Clients().remove(s.getRemoteSocketAddress().toString());
+            }
+            else
+            {
+                System.out.println("Le serveur est en pause...");
+                ReponseCIA rep = new ReponseCIA(ReponseCIA.SERVEUR_EN_PAUSE, null);
+                rep.EnvoieReponse(s);
+            }
+            
         } catch (IOException ex ) {
             Logger.getLogger(RequeteCIA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
@@ -129,7 +169,10 @@ public class RequeteCIA implements Requete , Serializable{
         
         ReponseCIA rep;
         if(pass != null){
-            rep = new ReponseCIA(ReponseCIA.LOGIN_OK, null);
+            //lorsqu'un client se connecte, je lui donne son id et je l'incrémente
+            rep = new ReponseCIA(ReponseCIA.LOGIN_OK, threadServeur.id);
+            threadServeur.id++;
+           
             System.out.println(adresseDistante+" / User "+ log.getUsername() + " : Login OK / "  +Thread.currentThread().getName());
             rep.EnvoieReponse(sock);
             return 1;

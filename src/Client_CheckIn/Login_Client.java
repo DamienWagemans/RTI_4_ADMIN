@@ -10,16 +10,20 @@ import ClassesCIA.Voyageur;
 import ClassesCIA.Login;
 import ClassesCIA.Reservation;
 import ClassesCIA.Ticket;
+import ProtocolHAFISCA.RequeteADMIN;
 import ProtocolCIA.ReponseCIA;
 import ProtocolCIA.RequeteCIA;
 import static divers.Config_Applic.pathConfig;
 import divers.Persistance_Properties;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Properties;
+import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -34,8 +38,16 @@ public class Login_Client extends javax.swing.JFrame {
      * Creates new form Login_Client
      */
     private Properties myProperties;
+    
     private Socket cliSock = null;
+    private Socket cliSock_Secours = null;
+    
     public Ticket ticket_save = null;
+    
+    private boolean serveur_en_pause = false;
+    
+    //cet id me sera donnée par le serveur compagnie
+    private long id = 0;
     
     public Login_Client() {
         initComponents();
@@ -71,7 +83,6 @@ public class Login_Client extends javax.swing.JFrame {
         UsernameLogin = new javax.swing.JTextField();
         PasswordLogin = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        LabelException = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         ButtonConnect = new javax.swing.JButton();
@@ -106,9 +117,6 @@ public class Login_Client extends javax.swing.JFrame {
             }
         });
 
-        LabelException.setBackground(new java.awt.Color(255, 255, 255));
-        LabelException.setForeground(new java.awt.Color(255, 0, 0));
-
         jLabel4.setForeground(new java.awt.Color(51, 102, 255));
         jLabel4.setText("Port :");
 
@@ -142,6 +150,8 @@ public class Login_Client extends javax.swing.JFrame {
             }
         });
 
+        BookingEx.setText("Details:");
+
         jButton_quitter.setText("Quitter");
         jButton_quitter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,8 +176,7 @@ public class Login_Client extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(PasswordLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                        .addComponent(LabelException, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
@@ -177,70 +186,73 @@ public class Login_Client extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(IpServeurTF, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ButtonConnect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(178, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(PortTF, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton_quitter)
-                                .addGap(44, 44, 44))))))
+                                .addComponent(ButtonConnect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(PortTF, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(172, 172, 172)
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(23, 23, 23)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BookingEx, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ButtonBooking, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ButtonBuyTicket, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jButton_quitter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(ButtonBooking, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(172, 172, 172)
+                                    .addComponent(jLabel1))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(31, 31, 31)
+                                    .addComponent(BookingEx, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(184, 184, 184)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addComponent(ButtonBuyTicket, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(LabelException, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(IpServeurTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)
-                            .addComponent(ButtonConnect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(PortTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(jButton_quitter))
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(UsernameLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(PasswordLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(IpServeurTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(ButtonConnect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PortTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(UsernameLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(PasswordLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ButtonBooking)
+                .addGap(25, 25, 25)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BookingEx, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
+                .addGap(18, 18, 18)
                 .addComponent(ButtonBuyTicket)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addComponent(ButtonBooking)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton_quitter, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -281,19 +293,41 @@ public class Login_Client extends javax.swing.JFrame {
                 PasswordLogin.setEnabled(false);
                 jButton1.setEnabled(false);
                 JOptionPane.showMessageDialog(null, "Login OK", "Login OK", JOptionPane.PLAIN_MESSAGE);
+                
+                //si ma connexion a été accepté, je peux donc demarrer un thread qui va se connecter sur le
+                //port de secours, et ainsi attendre tout ordre de l'administrateur, en meme temps je vais lui donner
+                //l'id qui m'a été fournie par le serveur compagnie.
+                id = (long)rep.getObjectClasse();
+                connection_port_secours((long)rep.getObjectClasse());
+               
             }
-            else
+            if(rep.getTypeRequete() ==  ReponseCIA.LOGIN_FAIL)
                 JOptionPane.showMessageDialog(null, "Mauvais mot de pass", "Mot de pass incorrect", JOptionPane.ERROR_MESSAGE);
             
-        }catch(Exception e){
-            if(e.getMessage().equals("CV"))
-                LabelException.setText("Veuillez remplir l'ensemble des champs");
-            else
-                LabelException.setText("Le nom d'utilisateur ou le mot de passe est incorrecte");   
+            //si le serveur est en pause..
+            if(rep.getTypeRequete() == ReponseCIA.SERVEUR_EN_PAUSE)
+            {
+                JOptionPane.showMessageDialog(null, "Le serveur est en pause", "PAUSE", JOptionPane.INFORMATION_MESSAGE);
+                Thread.sleep(3000);
+                this.cliSock.close();
+                System.exit(0);
+                this.dispose();
+                
+            }
+            
+            
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+       
     private void ButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonConnectActionPerformed
         // TODO add your handling code here:
         try
@@ -309,6 +343,7 @@ public class Login_Client extends javax.swing.JFrame {
             
             System.out.println(cliSock.getInetAddress().toString());
             JOptionPane.showMessageDialog(null, "Connexion etablie avec succes", "Connexion", JOptionPane.PLAIN_MESSAGE);
+            
             
             UsernameLogin.setEnabled(true);
             PasswordLogin.setEnabled(true);
@@ -327,141 +362,262 @@ public class Login_Client extends javax.swing.JFrame {
 
     private void ButtonBookingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBookingActionPerformed
         // TODO add your handling code here:
-        RequeteCIA req;
-        ReponseCIA rep;
-        Booking_Ticket_Window btw = new Booking_Ticket_Window(this, true);
-        btw.pack();
-        btw.show();
-        Object [] retour = btw.getObject();
-        String mot = (String)retour[0];
-        String mot2 = (String)retour[1];
-        try{
-            if(mot.equals("") || mot2.equals(""))
-               throw new Exception();
-            Booking book = new Booking(mot2, mot);
-                    
-            req = new RequeteCIA(RequeteCIA.VERIF_BOOKING, book);
-            req.EnvoieRequete(cliSock);
-            
-            rep = new ReponseCIA();
-            rep.RecevoirReponse(cliSock);
-            
-            if(rep.getTypeRequete() == ReponseCIA.BOOKING_FAIL){
-                BookingEx.setText("Aucune réservation, vous pouvez acheter un ticket");
-                ButtonBuyTicket.setEnabled(true);
-            }
-            else{
-                BookingEx.setText("Vous avez une réservation pour ce numéro de client");
-                
-            }
-        }catch(IOException e){
-            System.err.println("Erreur ? [" + e.getMessage() + "]"); 
-        }catch(ClassNotFoundException e){
-            System.out.println("--- erreur sur la classe = " + e.getMessage());
-        }catch(Exception ex){
-            BookingEx.setText("Attention de remplir l'ensemble des champs!");
-        }  
-    }//GEN-LAST:event_ButtonBookingActionPerformed
-
-    private void ButtonBuyTicketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBuyTicketActionPerformed
-        RequeteCIA req;
-        ReponseCIA rep;
-        
-        
-        Buy_ticket b_t = new Buy_ticket(this, true);
-        b_t.pack();
-        b_t.show();
-        Object [] retour = b_t.getObject();
-        Ticket ticket = new Ticket((String)retour[0], (String)retour[1], (int)retour[2], (String)retour[3]);
-        ticket_save = ticket;
-        
-        req = new RequeteCIA(RequeteCIA.BUY_TICKET, ticket_save);
-        try
+        if(serveur_en_pause == false)
         {
-            req.EnvoieRequete(cliSock);
-            rep = new ReponseCIA();
-            rep.RecevoirReponse(cliSock);
-            if(rep.getTypeRequete() == ReponseCIA.VOYAGEUR_INTROUVABLE)
+            RequeteCIA req;
+            ReponseCIA rep;
+            Booking_Ticket_Window btw = new Booking_Ticket_Window(this, true);
+            btw.pack();
+            btw.show();
+            Object [] retour = btw.getObject();
+            String mot = (String)retour[0];
+            String mot2 = (String)retour[1];
+            try
             {
-                //creation d'un nouveau voyageur !
-                JOptionPane.showMessageDialog(null, "Ce voyageur n'existe pas", "Voyageur inconnu", JOptionPane.ERROR_MESSAGE);
-                Nouveau_Voyageur n_v = new Nouveau_Voyageur(this, true, ticket_save.getNom_conducteur(), ticket_save.getImmatriculation());
-                n_v.pack();
-                n_v.show();
-                Object [] retour_nv_client = n_v.getObject();
-                Voyageur vygr = new Voyageur((String)retour_nv_client[0], (String)retour_nv_client[1], (String)retour_nv_client[2], (String)retour_nv_client[3], (String)retour_nv_client[4]);
-                req.setTypeRequete(RequeteCIA.CREATION_VOYAGEUR);
-                req.setObjectClasse(vygr);
-                req.EnvoieRequete(cliSock);
-                
-                //recuperation de la reponse du serveur !
-                rep.RecevoirReponse(cliSock);
-                if(rep.getTypeRequete() == ReponseCIA.VOYAGEUR_CREE_ACK)
+                if(mot.equals("") || mot2.equals(""))
+                   throw new Exception();
+                Booking book = new Booking(mot2, mot);
+                if(serveur_en_pause == false)
                 {
-                    BookingEx.setText("Cliquez sur Buy Ticket pour continuer");
-                    vygr = (Voyageur)rep.getObjectClasse();
-                    this.ticket_save.setImmatriculation(vygr.getImmatriculation());
-                    this.ticket_save.setNom_conducteur(vygr.getNom());
-                    
-                    JOptionPane.showMessageDialog(null, "Voyageur ajouté avec succes a la base de donnée! cliquez sur Buy Ticket","Insertion ok",  JOptionPane.PLAIN_MESSAGE);
+                    req = new RequeteCIA(RequeteCIA.VERIF_BOOKING, book);
+                    req.EnvoieRequete(cliSock);
+
+                    rep = new ReponseCIA();
+                    rep.RecevoirReponse(cliSock);
+                    if(rep.getTypeRequete() == ReponseCIA.BOOKING_FAIL)
+                    {
+                        BookingEx.setText("Aucune réservation, vous pouvez acheter un ticket");
+                        ButtonBuyTicket.setEnabled(true);
+                     }
+                    else
+                    {
+                        BookingEx.setText("Vous avez une réservation pour ce numéro de client");
+
+                    }
                 }
                 else
                 {
-                    JOptionPane.showMessageDialog(null, "Erreur lors de l'insertion", "Erreur insertion", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Le serveur est actuellement en pause", "Serveur en pause", JOptionPane.ERROR_MESSAGE);
                 }
-                
-                
-            }
-            else
-            {
-                if(rep.getTypeRequete() == ReponseCIA.TICKET_AUCUNE_TRAVERSEE)
-                {
-                    JOptionPane.showMessageDialog(null, "Aucune traversée disponible ", "Aucune traversée", JOptionPane.ERROR_MESSAGE);
-                }
-                else if(rep.getTypeRequete() == ReponseCIA.TICKET_CARTE_ERRONE)
-                {
-                    JOptionPane.showMessageDialog(null, "Le numéro de carte de crédit est incorrect", "Carte erronée", JOptionPane.ERROR_MESSAGE);
-                }
-                else if(rep.getTypeRequete() == ReponseCIA.TICKET_SOLDE_INSUFFISANT)
-                {
-                    JOptionPane.showMessageDialog(null, "Dommage, vous etes fauché!", "Solde insuffisant", JOptionPane.ERROR_MESSAGE);
-                }
-                else if(rep.getTypeRequete() == ReponseCIA.TICKET_ACK)
-                {
-                    JOptionPane.showMessageDialog(null, "Ticket acheté !!", "Felicitation !!", JOptionPane.ERROR_MESSAGE);
-                    Reservation res = new Reservation ((Reservation)rep.getObjectClasse());
-                    Reservation_details r_d = new Reservation_details(this, true, res);
-                    
-                    r_d.setVisible(true);
-                    ticket_save.setImmatriculation("");
-                    ticket_save.setNom_conducteur("");
-                    ticket_save.setNombre_passager(0);
-                    ticket_save.setNum_carte("");
-                    
-                    
-                }
-                
-            }
-            
-        } catch (IOException ex) 
+
+
+            }catch(IOException e){
+                System.err.println("Erreur ? [" + e.getMessage() + "]"); 
+            }catch(ClassNotFoundException e){
+                System.out.println("--- erreur sur la classe = " + e.getMessage());
+            }catch(Exception ex){
+                BookingEx.setText("Attention de remplir l'ensemble des champs!");
+            }  
+        }
+        else
         {
-            Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Le serveur est actuellement en pause", "Serveur en pause", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_ButtonBookingActionPerformed
+
+    private void ButtonBuyTicketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBuyTicketActionPerformed
+        if(serveur_en_pause == false)
+        {
+            RequeteCIA req;
+            ReponseCIA rep;
+
+
+            Buy_ticket b_t = new Buy_ticket(this, true);
+            b_t.pack();
+            b_t.show();
+            Object [] retour = b_t.getObject();
+            Ticket ticket = new Ticket((String)retour[0], (String)retour[1], (int)retour[2], (String)retour[3]);
+            ticket_save = ticket;
+
+            req = new RequeteCIA(RequeteCIA.BUY_TICKET, ticket_save);
+            try
+            {
+                if(serveur_en_pause == false)
+                {
+                    req.EnvoieRequete(cliSock);
+                    rep = new ReponseCIA();
+                    rep.RecevoirReponse(cliSock);
+                    if(rep.getTypeRequete() == ReponseCIA.VOYAGEUR_INTROUVABLE)
+                    {
+                        //creation d'un nouveau voyageur !
+                        JOptionPane.showMessageDialog(null, "Ce voyageur n'existe pas", "Voyageur inconnu", JOptionPane.ERROR_MESSAGE);
+                        Nouveau_Voyageur n_v = new Nouveau_Voyageur(this, true, ticket_save.getNom_conducteur(), ticket_save.getImmatriculation());
+                        n_v.pack();
+                        n_v.show();
+                        Object [] retour_nv_client = n_v.getObject();
+                        Voyageur vygr = new Voyageur((String)retour_nv_client[0], (String)retour_nv_client[1], (String)retour_nv_client[2], (String)retour_nv_client[3], (String)retour_nv_client[4]);
+
+                        req.setTypeRequete(RequeteCIA.CREATION_VOYAGEUR);
+                        req.setObjectClasse(vygr);
+                        req.EnvoieRequete(cliSock);
+
+                        //recuperation de la reponse du serveur !
+                        rep.RecevoirReponse(cliSock);
+                        if(rep.getTypeRequete() == ReponseCIA.VOYAGEUR_CREE_ACK)
+                        {
+                            BookingEx.setText("Cliquez sur Buy Ticket pour continuer");
+                            vygr = (Voyageur)rep.getObjectClasse();
+                            this.ticket_save.setImmatriculation(vygr.getImmatriculation());
+                            this.ticket_save.setNom_conducteur(vygr.getNom());
+
+                            JOptionPane.showMessageDialog(null, "Voyageur ajouté avec succes a la base de donnée! cliquez sur Buy Ticket","Insertion ok",  JOptionPane.PLAIN_MESSAGE);
+                        }
+                        else
+                        {
+                            JOptionPane.showMessageDialog(null, "Erreur lors de l'insertion", "Erreur insertion", JOptionPane.ERROR_MESSAGE);
+                        }
+          
+                        if(rep.getTypeRequete() == ReponseCIA.TICKET_AUCUNE_TRAVERSEE)
+                        {
+                            JOptionPane.showMessageDialog(null, "Aucune traversée disponible ", "Aucune traversée", JOptionPane.ERROR_MESSAGE);
+                        }
+                        else if(rep.getTypeRequete() == ReponseCIA.TICKET_CARTE_ERRONE)
+                        {
+                            JOptionPane.showMessageDialog(null, "Le numéro de carte de crédit est incorrect", "Carte erronée", JOptionPane.ERROR_MESSAGE);
+                        }
+                        else if(rep.getTypeRequete() == ReponseCIA.TICKET_SOLDE_INSUFFISANT)
+                        {
+                            JOptionPane.showMessageDialog(null, "Dommage, vous etes fauché!", "Solde insuffisant", JOptionPane.ERROR_MESSAGE);
+                        }
+                        else if(rep.getTypeRequete() == ReponseCIA.TICKET_ACK)
+                        {
+                            JOptionPane.showMessageDialog(null, "Ticket acheté !!", "Felicitation !!", JOptionPane.ERROR_MESSAGE);
+                            Reservation res = new Reservation ((Reservation)rep.getObjectClasse());
+                            Reservation_details r_d = new Reservation_details(this, true, res);
+
+                            r_d.setVisible(true);
+                            ticket_save.setImmatriculation("");
+                            ticket_save.setNom_conducteur("");
+                            ticket_save.setNombre_passager(0);
+                            ticket_save.setNum_carte("");
+
+
+                        }
+
+                    }  
+                    else
+                    {
+                        JOptionPane.showMessageDialog(null, "Le serveur est actuellement en pause", "Serveur en pause", JOptionPane.ERROR_MESSAGE);
+                    }
+                
+                } 
+
+                
+
+            } catch (IOException ex) 
+            {
+                Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Le serveur est actuellement en pause", "Serveur en pause", JOptionPane.ERROR_MESSAGE);
         }
         
         
     }//GEN-LAST:event_ButtonBuyTicketActionPerformed
 
     private void jButton_quitterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_quitterActionPerformed
+
         try {
-            cliSock.close();
+            RequeteCIA req = new RequeteCIA(RequeteCIA.STOP, id);
+            req.EnvoieRequete(cliSock);
+            this.cliSock.close();
+            
+            System.out.println("Premier flux fermé");
+            this.cliSock_Secours.close();
+             System.out.println("Deuxieme flux fermé");
+            
+            
+            //en commentaire car personne du coté serveur n'est en attente sur un message pour cette socket 
+            //RequeteADMIN req_admin = new RequeteADMIN(RequeteADMIN.STOP, null);
+            //req_admin.EnvoieRequete_JAVA(this.cliSock_Secours);
+            this.dispose();
+            System.exit(0);
+            
         } catch (IOException ex) {
             Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
         }
-        this.setVisible(false);
     }//GEN-LAST:event_jButton_quitterActionPerformed
 
+    
+    //Ce thread se connecte au threadSecours du serveur compagnie sur le port_compagnie+2,
+    // il attend les eventuels ordre de l'administrateur qui se connectera sur le port_compagnie+1
+    // du serveur compagnie
+    public void connection_port_secours (long id)
+    {
+        Thread threadSecours = new Thread()
+        {
+            @Override
+            public void run()  
+            {
+                try 
+                {
+                    //connexion au threadSecours
+                    cliSock_Secours = new Socket(IpServeurTF.getText(), Integer.parseInt(PortTF.getText())+2);
+                    
+                    
+                    while(!isInterrupted())
+                    {
+                        long id_moi = id;//On attend un message important
+                        RequeteADMIN req_admin = new RequeteADMIN(RequeteADMIN.IDENTIFICATION, id);
+                        req_admin.EnvoieRequete_JAVA(cliSock_Secours);
+                        
+                        System.out.println("Client connecté au thread secours, en attente d'instruction");
+                        req_admin.RecevoirRequete_JAVA(cliSock_Secours);
+
+                        switch(req_admin.getType())
+                        {
+
+                            case 4 : 
+                                System.err.println("Client: dans pause resume");
+                                if(serveur_en_pause == true)
+                                {
+                                    JOptionPane.showMessageDialog(null, "Serveur remis en route", "Pause terminée", JOptionPane.INFORMATION_MESSAGE);
+                                    serveur_en_pause = false;
+                                }
+                                else 
+                                { 
+                                    JOptionPane.showMessageDialog(null, "Le serveur est actuellement en pause", "Serveur en pause", JOptionPane.INFORMATION_MESSAGE);
+                                    serveur_en_pause = true;
+                                }
+                                break;
+                            case 5:
+                                //stop
+                                int sec = (int)req_admin.getObject();
+                                 BookingEx.setText("Extinction dans "+ sec + " secondes");
+                                Thread.sleep(sec*1000);
+                               
+                                RequeteCIA req = new RequeteCIA(RequeteCIA.STOP, id_moi);
+                                req.EnvoieRequete(cliSock);
+                                
+                                cliSock.close();
+
+                                System.out.println("Premier flux fermé");
+
+                                cliSock_Secours.close();
+                                 System.out.println("Deuxieme flux fermé");
+                                System.exit(0);
+                                dispose();
+
+                        }
+                    }
+                } 
+                catch (IOException   ex) 
+                {
+                    System.err.println(ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Login_Client.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        };
+        threadSecours.start();  
+    }
+ 
     /**
      * @param args the command line arguments
      */
@@ -504,7 +660,6 @@ public class Login_Client extends javax.swing.JFrame {
     private javax.swing.JButton ButtonBuyTicket;
     private javax.swing.JButton ButtonConnect;
     private javax.swing.JTextField IpServeurTF;
-    private javax.swing.JLabel LabelException;
     private javax.swing.JTextField PasswordLogin;
     private javax.swing.JTextField PortTF;
     private javax.swing.JTextField UsernameLogin;

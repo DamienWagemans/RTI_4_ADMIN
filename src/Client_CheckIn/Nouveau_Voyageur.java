@@ -195,7 +195,7 @@ public class Nouveau_Voyageur extends javax.swing.JDialog {
         adresse = jtextfield_adresse.getText();
         mail = jtextfield_mail.getText();
         immatriculation = jtextfield_immatriculation.getText();
-        hide();
+        this.dispose();
     }//GEN-LAST:event_Button_CheckActionPerformed
 
     private void Button_Cancel_CheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Cancel_CheckActionPerformed

@@ -10,6 +10,7 @@ package ProtocolEBOOP;
 import ClassesEBOOP.Client;
 import ClassesEBOOP.Reservation;
 import ClassesEBOOP.Traversee;
+import Serveur_CheckIn.ThreadServeur;
 import database.facility;
 import interface_req_rep.Requete;
 import java.io.IOException;
@@ -74,7 +75,7 @@ public class RequeteEBOOP implements Requete , Serializable{
     }
 
     @Override
-    public Runnable createRunnable(Socket s, Socket Sock_card, Statement instruc) {
+    public Runnable createRunnable(Socket s, Socket Sock_card, Statement instruc, ThreadServeur ts) {
         return new Runnable() 
         {
             public void run() {
@@ -91,7 +92,6 @@ public class RequeteEBOOP implements Requete , Serializable{
     {
         try 
         {
-            
             while(this.getTypeRequete() != -1)
             {   
                 switch(this.getTypeRequete())

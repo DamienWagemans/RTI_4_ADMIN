@@ -6,13 +6,13 @@
 package Serveur_CheckIn;
 
 import ProtocolCIA.RequeteCIA;
-import ProtocolEBOOP.RequeteEBOOP;
 import interface_req_rep.Requete;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.*;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -23,17 +23,81 @@ public class ThreadServeur extends Thread{
     private int port;
     private int nbr_client;
     private SourceTaches tachesAExecuter;
-    private ServerSocket SSocket = null;
+    
+    private ServerSocket SSocket_CheckINApp = null;
+    private ServerSocket SSocket_Admin = null;
+    private ServerSocket SSocket_Secours = null;
+    
+    //Contiendra les clients connectés, lorsqu'un createrenable (requeteCIA) sera crée,
+    // le runnable a la reference de threadserveur, il peut donc acceder a cette liste et ajouter des clients
+    //dès qu'on sort du runnable, on supprime le client de la liste
+    private Vector<String> Connected_Clients = null;
+    private boolean serveur_en_pause = false;
+    
     private Socket socket_carte = null;
     private RequeteCIA req = new RequeteCIA();
     private Statement instruc;
 
+    //chauqe client qui se connecte aura un identifiant. Le thread secour aura une liste de socket liée a un identifiant
+    // quand un cleint se deconnecte, il prévient le serveur compagnie via la port 50000, en donnant son id,
+    // le serveur compagnie peut donc enlever la socket de la liste du thread secour
+    public long id = 0;
+    
+    //quand un client va se déconnecter, il va falloir que je supprime sa socket dans la liste du thread secours
+    // donc quand un client se déconnecte, il envoit une requete STOP au thread client, comme d'ab mais en plus deca,
+    //il envoit sa socket, le thread client pourra donc supprimer la socket de la liste
+    
+    //ca marche pas, socket pas serializable..
+    public ThreadSecours TS = null;
+    
+    
+    
+    public boolean isServeur_en_pause() {
+        return serveur_en_pause;
+    }
+
+    public void setServeur_en_pause(boolean serveur_en_pause) {
+        this.serveur_en_pause = serveur_en_pause;
+    }
+
+    public ServerSocket getSSocket_CheckINApp() {
+        return SSocket_CheckINApp;
+    }
+
+    public void setSSocket_CheckINApp(ServerSocket SSocket_CheckINApp) {
+        this.SSocket_CheckINApp = SSocket_CheckINApp;
+    }
+
+    public Vector<String> getConnected_Clients() {
+        return Connected_Clients;
+    }
+
+    public void setConnected_Clients(Vector<String> Connected_Clients) {
+        this.Connected_Clients = Connected_Clients;
+    }
+
+    public ServerSocket getSSocket_Admin() {
+        return SSocket_Admin;
+    }
+
+    public void setSSocket_Admin(ServerSocket SSocket_Admin) {
+        this.SSocket_Admin = SSocket_Admin;
+    }
+
+    public ServerSocket getSSocket_Secours() {
+        return SSocket_Secours;
+    }
+
+    public void setSSocket_Secours(ServerSocket SSocket_Secours) {
+        this.SSocket_Secours = SSocket_Secours;
+    }
+    
     public ServerSocket getSSocket() {
-        return SSocket;
+        return SSocket_CheckINApp;
     }
 
     public void setSSocket(ServerSocket SSocket) {
-        this.SSocket = SSocket;
+        this.SSocket_CheckINApp = SSocket;
     }
 
     public Socket getSocket_carte() {
@@ -59,6 +123,7 @@ public class ThreadServeur extends Thread{
         port = p; 
         tachesAExecuter = st; 
         socket_carte = socket_c;
+        Connected_Clients = new Vector<String>();
     }
     
     @Override
@@ -66,7 +131,28 @@ public class ThreadServeur extends Thread{
     {
         try 
         {
-            SSocket = new ServerSocket(port); 
+            //pour la reception des clients CheckIn
+            SSocket_CheckINApp = new ServerSocket(port);
+            //pour la connexion de l'administrateur
+            SSocket_Admin = new ServerSocket(port+1);
+            //lorsqu'un client CheckInApp se connecte, il se connecte en meme temps sur un autre port de secours
+            // ainsi, un client a donc deux flux vers le serveur : 1 pour les commandes traditionnels (buy ticket , etc..)
+            // et un deuxieme flux pour les ordres d'administrztion donnée par l'administrateur
+            SSocket_Secours = new ServerSocket(port+2);
+            
+            
+            //le thread secours sera en attente pour les doubles connexions de clients
+            // le thread second aura donc les sockets de tout les clients connecté 
+            ThreadSecours TS = new ThreadSecours(this);
+            //le thread admin peut envoyé des ordres au thread secours pour dire par exemple a tout ses client de se 
+            //mettre en pause, ..
+            ThreadAdministrateur TA = new ThreadAdministrateur(this, TS);
+            this.TS = TS;
+            TS.start();
+            TA.start();
+            
+            
+            
         }
         catch (IOException e) 
         {
@@ -96,15 +182,16 @@ public class ThreadServeur extends Thread{
                
                 System.out.println("************ Serveur en attente");
                
-                CSocket = SSocket.accept(); 
+                CSocket = SSocket_CheckINApp.accept(); 
                 System.out.println(CSocket.getRemoteSocketAddress().toString()+ " / accept / thread serveur");
-
+                
+                System.err.println("Voici l'etat du serveur  "+ this.isServeur_en_pause());
                 ObjectInputStream ois=null; 
                 ois = new ObjectInputStream(CSocket.getInputStream());
                 Requete temp= (Requete) ois.readObject();
                 
                 System.out.println(temp.getClass().getName());
-                Runnable travail = temp.createRunnable(CSocket, socket_carte, instruc); 
+                Runnable travail = temp.createRunnable(CSocket, socket_carte, instruc, this); 
                 if (travail != null)
                 {
                     

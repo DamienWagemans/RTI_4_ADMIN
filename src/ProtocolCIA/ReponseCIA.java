@@ -31,6 +31,8 @@ public class ReponseCIA implements Reponse, Serializable{
     public static int TICKET_NAVIRE_COMPLET = 506;
     public static int TICKET_AUCUNE_TRAVERSEE = 507;
     public static int TICKET_CARTE_ERRONE = 508;
+    
+    public static int SERVEUR_EN_PAUSE = 509;
 
     
     
