@@ -8,11 +8,18 @@ package Administrateur;
 import ClassesCIA.Login;
 import ProtocolHAFISCA.ReponseADMIN;
 import ProtocolHAFISCA.RequeteADMIN;
+import static divers.Config_Applic.pathConfig;
+import divers.Persistance_Properties;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.Properties;
+import java.util.StringTokenizer;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,13 +32,23 @@ public class Admin extends javax.swing.JFrame {
     private int PORT;
     private Socket cli_sock;
     
+    private DataInputStream dis_c;
+    private DataOutputStream dos_c;
+    
     private boolean connected = false;
+    
+    private String IP_SERVEUR_JAVA;
+    private String IP_SERVEUR_C;
+    
     
     /**
      * Creates new form Admin
      */
     public Admin() {
         initComponents();
+        Properties myProperties = Persistance_Properties.LoadProp(pathConfig);
+        IP_SERVEUR_C = myProperties.getProperty("ip_serveur_c");
+        IP_SERVEUR_JAVA = myProperties.getProperty("ip_campagnie");
     }
 
     /**
@@ -54,6 +71,7 @@ public class Admin extends javax.swing.JFrame {
         jButton_pause_resume = new javax.swing.JButton();
         jButton_stop = new javax.swing.JButton();
         jButton_quitter = new javax.swing.JButton();
+        jComboBox_type_serveur = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,8 +79,6 @@ public class Admin extends javax.swing.JFrame {
         jLabel1.setText("Administration !!!");
 
         jLabel2.setText("IP : ");
-
-        jTextField_ip.setText("127.0.0.1");
 
         jLabel3.setText("Port : ");
 
@@ -114,33 +130,46 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
+        jComboBox_type_serveur.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Serveur JAVA", "Serveur C" }));
+        jComboBox_type_serveur.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox_type_serveurItemStateChanged(evt);
+            }
+        });
+        jComboBox_type_serveur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_type_serveurActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField_ip, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton_pause_resume, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton_liste_des_clients, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton_connect, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
-                                .addComponent(jTextField_port, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
-                                .addComponent(jButton_login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jButton_stop, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton_quitter, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton_pause_resume, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                        .addComponent(jButton_liste_des_clients, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton_connect, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                        .addComponent(jButton_login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton_stop, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                        .addComponent(jButton_quitter, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                        .addComponent(jComboBox_type_serveur, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addComponent(jLabel2)
+                            .addGap(18, 18, 18)
+                            .addComponent(jTextField_ip, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(112, 112, 112)
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel3)
+                            .addGap(18, 18, 18)
+                            .addComponent(jTextField_port, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -156,7 +185,9 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField_port, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addComponent(jComboBox_type_serveur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton_connect)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton_login)
@@ -168,7 +199,7 @@ public class Admin extends javax.swing.JFrame {
                 .addComponent(jButton_stop)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton_quitter)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -177,25 +208,38 @@ public class Admin extends javax.swing.JFrame {
     private void jButton_connectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_connectActionPerformed
         try 
         {
+            jComboBox_type_serveur.setEnabled(false);
+            
             PORT = Integer.parseInt(jTextField_port.getText());
             IP = jTextField_ip.getText();
             
             cli_sock = new Socket(IP, PORT);
-            
-            RequeteADMIN req = new RequeteADMIN();
-            req.RecevoirRequete_JAVA(cli_sock);
-            if(req.getType()==RequeteADMIN.CONNECT_OK)
+            if (jComboBox_type_serveur.getSelectedIndex()==0)
             {
-                JOptionPane.showMessageDialog(null, "Vous etes désormais connecté, vous devez vous identidiez", "OK", JOptionPane.INFORMATION_MESSAGE);
-                jButton_connect.setEnabled(false);
-                jButton_login.setEnabled(true);
-                connected = true;
+                RequeteADMIN req = new RequeteADMIN();
+                req.RecevoirRequete_JAVA(cli_sock);
+                if(req.getType()==RequeteADMIN.CONNECT_OK)
+                {
+                    JOptionPane.showMessageDialog(null, "Vous etes désormais connecté, vous devez vous identidiez", "OK", JOptionPane.INFORMATION_MESSAGE);
+                    jButton_connect.setEnabled(false);
+                    jButton_login.setEnabled(true);
+                    connected = true;
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Un administrateur est deja connecté", "Impossible de se connecter", JOptionPane.ERROR_MESSAGE);
+                    cli_sock.close();
+                }
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "Un administrateur est deja connecté", "Impossible de se connecter", JOptionPane.ERROR_MESSAGE);
-                cli_sock.close();
+                jButton_connect.setEnabled(false);
+                jButton_login.setEnabled(true);
+                jButton_pause_resume.setEnabled(false);
+                jButton_liste_des_clients.setEnabled(false);
+                jButton_stop.setEnabled(false);
             }
+
                 
             
         } 
@@ -221,23 +265,47 @@ public class Admin extends javax.swing.JFrame {
             Object [] retour = LA.getObject();
             Login login = new Login((String)retour[0], (String)retour[1]);
             
-            
-            RequeteADMIN req = new RequeteADMIN(RequeteADMIN.LOGINA, login);
-            req.EnvoieRequete_JAVA(cli_sock);
-            ReponseADMIN rep = new ReponseADMIN();
-            rep.RecevoirReponse_JAVA(cli_sock);
-            
-            if(rep.getType() == ReponseADMIN.LOGIN_FAIL)
+            if(jComboBox_type_serveur.getSelectedIndex()==0)
             {
-                JOptionPane.showMessageDialog(null, "Mot de pass ou Username incorrect !", "Erreur d'identification", JOptionPane.ERROR_MESSAGE);
+
+                    RequeteADMIN req = new RequeteADMIN(RequeteADMIN.LOGINA, login);
+                    req.EnvoieRequete_JAVA(cli_sock);
+                    ReponseADMIN rep = new ReponseADMIN();
+                    rep.RecevoirReponse_JAVA(cli_sock);
+
+                    if(rep.getType() == ReponseADMIN.LOGIN_FAIL)
+                    {
+                        JOptionPane.showMessageDialog(null, "Mot de pass ou Username incorrect !", "Erreur d'identification", JOptionPane.ERROR_MESSAGE);
+                    }
+                    else
+                    {
+                        JOptionPane.showMessageDialog(null, "Identification validée !", "OK", JOptionPane.INFORMATION_MESSAGE);
+                        jButton_liste_des_clients.setEnabled(true);
+                        jButton_login.setEnabled(false);
+                        jButton_pause_resume.setEnabled(true);
+                        jButton_stop.setEnabled(true);
+                    }
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "Identification validée !", "OK", JOptionPane.INFORMATION_MESSAGE);
-                jButton_liste_des_clients.setEnabled(true);
-                jButton_login.setEnabled(false);
-                jButton_pause_resume.setEnabled(true);
-                jButton_stop.setEnabled(true);
+                this.dos_c = new DataOutputStream(cli_sock.getOutputStream());
+                String envoi = "logina"+";"+(String)retour[0]+";"+(String)retour[1];
+                EnvoiRequete_C(envoi.getBytes(),dos_c);
+                this.dis_c = new DataInputStream(cli_sock.getInputStream());
+                String rep = RecevoirRequete_C(dis_c);
+                System.out.println("Voici la réponse : " + rep);
+                if(rep.equals("ack,login"))
+                {
+                    JOptionPane.showMessageDialog(null, "Identification validée !", "OK", JOptionPane.INFORMATION_MESSAGE);
+                    jButton_liste_des_clients.setEnabled(true);
+                    jButton_login.setEnabled(false);
+                    jButton_pause_resume.setEnabled(true);
+                    jButton_stop.setEnabled(true);
+                    connected= true;
+                }
+                
+                
+                
             }
         } 
         catch (IOException ex) {
@@ -250,10 +318,29 @@ public class Admin extends javax.swing.JFrame {
     private void jButton_stopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_stopActionPerformed
         try 
         {
-            String sec = JOptionPane.showInputDialog(null,"Combien de secondes avant l'arret ?","Arret", JOptionPane.QUESTION_MESSAGE);
             
-            RequeteADMIN req = new RequeteADMIN(RequeteADMIN.STOP, Integer.parseInt(sec));
-            req.EnvoieRequete_JAVA(cli_sock);
+            
+            
+            if(jComboBox_type_serveur.getSelectedIndex() == 0)
+            {
+                String sec = JOptionPane.showInputDialog(null,"Combien de secondes avant l'arret ?","Arret", JOptionPane.QUESTION_MESSAGE);
+                RequeteADMIN req = new RequeteADMIN(RequeteADMIN.STOP, Integer.parseInt(sec));
+                req.EnvoieRequete_JAVA(cli_sock);
+                jButton_liste_des_clients.setEnabled(false);
+                jButton_login.setEnabled(false);
+                jButton_pause_resume.setEnabled(false);
+                jButton_stop.setEnabled(false);
+                jButton_connect.setEnabled(false);
+            }
+            else
+            {
+                EnvoiRequete_C(("stop;stop").getBytes(),dos_c);
+
+                String rep = RecevoirRequete_C(dis_c);
+                StringTokenizer st = new StringTokenizer(rep, ";");
+                st.nextToken();
+                JOptionPane.showMessageDialog(null, st.nextToken(), "OK", JOptionPane.INFORMATION_MESSAGE);
+            }
         } 
         catch (IOException ex) 
         {
@@ -264,13 +351,22 @@ public class Admin extends javax.swing.JFrame {
     private void jButton_quitterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_quitterActionPerformed
         if(connected == true)
         {   
-            try {
-                RequeteADMIN req = new RequeteADMIN(RequeteADMIN.DISCONNECT, null);
-                req.EnvoieRequete_JAVA(cli_sock);
-                
-            } catch (IOException ex) {
-                Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+            if(jComboBox_type_serveur.getSelectedIndex() == 0)
+            {
+                try 
+                {
+                    RequeteADMIN req = new RequeteADMIN(RequeteADMIN.DISCONNECT, null);
+                    req.EnvoieRequete_JAVA(cli_sock);
+
+                } catch (IOException ex) {
+                    Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
+        }
+        try {
+            cli_sock.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Admin.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.dispose();
     }//GEN-LAST:event_jButton_quitterActionPerformed
@@ -278,22 +374,39 @@ public class Admin extends javax.swing.JFrame {
     private void jButton_liste_des_clientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_liste_des_clientsActionPerformed
         try 
         {
-            RequeteADMIN req = new RequeteADMIN(RequeteADMIN.LCLIENTS, null);
-            req.EnvoieRequete_JAVA(cli_sock);
-            ReponseADMIN rep = new ReponseADMIN();
-            rep.RecevoirReponse_JAVA(cli_sock);
-            Vector<String> connected_client = new Vector<>();
-            connected_client = (Vector<String>) rep.getObject();
-            if(connected_client.size() == 0)
+            if(jComboBox_type_serveur.getSelectedIndex()==0)
             {
-                JOptionPane.showMessageDialog(null, "Aucune client n'est connecté !", "Aucun client", JOptionPane.INFORMATION_MESSAGE);
+                RequeteADMIN req = new RequeteADMIN(RequeteADMIN.LCLIENTS, null);
+                req.EnvoieRequete_JAVA(cli_sock);
+                ReponseADMIN rep = new ReponseADMIN();
+                rep.RecevoirReponse_JAVA(cli_sock);
+                Vector<String> connected_client = new Vector<>();
+                connected_client = (Vector<String>) rep.getObject();
+                if(connected_client.size() == 0)
+                {
+                    JOptionPane.showMessageDialog(null, "Aucune client n'est connecté !", "Aucun client", JOptionPane.INFORMATION_MESSAGE);
+                }
+                else
+                {
+                    for(int i = 0; i < connected_client.size() ; i++)
+                    {
+                        JOptionPane.showMessageDialog(null, "Details client : " + connected_client.get(i), "Client n°"+i+1, JOptionPane.INFORMATION_MESSAGE);
+                    }
+                }
             }
             else
             {
-                for(int i = 0; i < connected_client.size() ; i++)
+                EnvoiRequete_C("lclients;lclients".getBytes(),dos_c);
+
+                String rep = RecevoirRequete_C(dis_c);
+                StringTokenizer st = new StringTokenizer(rep, ",");
+            
+                String s = "";
+                while (st.hasMoreTokens()) 
                 {
-                    JOptionPane.showMessageDialog(null, "Details client : " + connected_client.get(i), "Client n°"+i+1, JOptionPane.INFORMATION_MESSAGE);
+                    s += st.nextToken() + "\n";
                 }
+                JOptionPane.showMessageDialog(null, "Client connecté : " + s, "Aucun client", JOptionPane.INFORMATION_MESSAGE);
             }
 
             
@@ -308,8 +421,19 @@ public class Admin extends javax.swing.JFrame {
     private void jButton_pause_resumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_pause_resumeActionPerformed
         try 
         {
-            RequeteADMIN req = new RequeteADMIN(RequeteADMIN.PAUSE_RESUME, null);
-            req.EnvoieRequete_JAVA(cli_sock);
+            if(jComboBox_type_serveur.getSelectedIndex()==0)
+            {
+                RequeteADMIN req = new RequeteADMIN(RequeteADMIN.PAUSE_RESUME, null);
+                req.EnvoieRequete_JAVA(cli_sock);
+            }
+            else
+            {
+                EnvoiRequete_C("pause;pause".getBytes(),dos_c);
+                String rep = RecevoirRequete_C(dis_c);
+                StringTokenizer st = new StringTokenizer(rep, ";");
+                st.nextToken();
+                JOptionPane.showMessageDialog(null, st.nextToken(), "Resume/Pause", JOptionPane.INFORMATION_MESSAGE);
+            }
         } 
         catch (IOException ex) 
         {
@@ -317,6 +441,22 @@ public class Admin extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton_pause_resumeActionPerformed
+
+    private void jComboBox_type_serveurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_type_serveurActionPerformed
+
+        if(jComboBox_type_serveur.getSelectedIndex() == 0)
+        {
+            jTextField_ip.setText(IP_SERVEUR_JAVA);
+        }
+        else
+        {
+            jTextField_ip.setText(IP_SERVEUR_C);
+        }
+    }//GEN-LAST:event_jComboBox_type_serveurActionPerformed
+
+    private void jComboBox_type_serveurItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_type_serveurItemStateChanged
+
+            }//GEN-LAST:event_jComboBox_type_serveurItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -352,6 +492,36 @@ public class Admin extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+    private String RecevoirRequete_C(DataInputStream dis)
+    {
+        try 
+        {
+            byte b;
+            StringBuffer rep = new StringBuffer();
+            while((b = dis_c.readByte())!=((byte)'\n'))
+                rep.append((char)b);
+            return rep.toString().trim();
+        } 
+        catch (IOException ex)
+        {
+            System.out.println("--- erreur IO = " + ex.getMessage());
+        }
+        return null;       
+    }
+    private void EnvoiRequete_C(byte [] req,DataOutputStream dos)
+    {
+        try
+        {
+            System.err.println( "voici ois :" + dos);
+            dos.write(req);dos.flush();
+        }
+        catch (IOException e)
+        { 
+            System.err.println("Erreur réseau ? [" + e.getMessage() + "]"); 
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_connect;
@@ -360,6 +530,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton jButton_pause_resume;
     private javax.swing.JButton jButton_quitter;
     private javax.swing.JButton jButton_stop;
+    private javax.swing.JComboBox<String> jComboBox_type_serveur;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

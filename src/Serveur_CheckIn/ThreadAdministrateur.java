@@ -156,6 +156,7 @@ public class ThreadAdministrateur extends Thread{
                                 }
                                 break;
                             case 5:
+                                int sleep = (int)req.getObject();
                                 req_admin = new RequeteADMIN(RequeteADMIN.STOP, (int)req.getObject());
                                 if(threadSecours.getSock_connected_clients().size() != 0)
                                 {
@@ -170,6 +171,14 @@ public class ThreadAdministrateur extends Thread{
                                         }
                                     }
                                 }
+                                Thread.sleep(sleep*1000);
+                                Cli_sock.close();
+                                threadSecours.interrupt();
+                                threadServeur.getSSocket().close();
+                                threadServeur.interrupt();
+                                
+                                System.out.println("Deuxieme flux fermé");
+                                System.exit(0);
                                 break;
                         }
                            
@@ -185,6 +194,8 @@ public class ThreadAdministrateur extends Thread{
                 {
                     Logger.getLogger(ThreadAdministrateur.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ThreadAdministrateur.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (InterruptedException ex) {
                     Logger.getLogger(ThreadAdministrateur.class.getName()).log(Level.SEVERE, null, ex);
                 }
 

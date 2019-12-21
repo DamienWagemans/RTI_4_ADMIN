@@ -1,0 +1,1415 @@
+18:49:51  ---  Récuperation des informations de le fichier de configuration18:49:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+19:52:41  ---  Récuperation des informations de le fichier de configuration
+19:52:41  ---  Creation de la socket sur le port 50000 avec l ip localhost
+19:52:41  ---  Bind OK19:53:02  ---  Login valide de Damien
+10:11:54  ---  Récuperation des informations de le fichier de configuration
+10:11:54  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+10:11:54  ---  Bind OK
+10:12:07  ---  Login invalide de Miguel
+10:12:12  ---  Login valide de Miguel
+10:13:38  ---  Récuperation des informations de le fichier de configuration
+10:13:38  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+10:13:57  ---  Récuperation des informations de le fichier de configuration
+10:13:57  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+10:13:57  ---  Bind OK
+10:14:13  ---  Récuperation des informations de le fichier de configuration
+10:14:13  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+10:14:13  ---  Bind OK
+10:14:19  ---  Login valide de Miguel
+14:32:09  ---  Récuperation des informations de le fichier de configuration
+14:32:09  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:47:59  ---  Récuperation des informations de le fichier de configuration
+14:47:59  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:48:36  ---  Récuperation des informations de le fichier de configuration
+14:48:36  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:48:43  ---  Récuperation des informations de le fichier de configuration
+14:48:43  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:48:58  ---  Récuperation des informations de le fichier de configuration
+14:48:58  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:49:01  ---  Récuperation des informations de le fichier de configuration
+14:49:01  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:49:01  ---  Récuperation des informations de le fichier de configuration
+14:49:01  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:49:02  ---  Récuperation des informations de le fichier de configuration
+14:49:02  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:49:03  ---  Récuperation des informations de le fichier de configuration
+14:49:03  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:49:22  ---  Récuperation des informations de le fichier de configuration
+14:49:22  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:50:26  ---  Récuperation des informations de le fichier de configuration
+14:50:26  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:53:00  ---  Récuperation des informations de le fichier de configuration
+14:53:00  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:56:31  ---  Récuperation des informations de le fichier de configuration
+14:56:31  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:58:11  ---  Récuperation des informations de le fichier de configuration
+14:58:11  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+14:59:41  ---  Récuperation des informations de le fichier de configuration
+14:59:41  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+15:00:46  ---  Récuperation des informations de le fichier de configuration
+15:00:46  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+15:00:52  ---  Récuperation des informations de le fichier de configuration
+15:00:52  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+15:03:38  ---  Récuperation des informations de le fichier de configuration
+15:03:38  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+15:39:16  ---  Récuperation des informations de le fichier de configuration
+15:39:16  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+15:39:32  ---  Login valide de Damien
+15:46:07  ---  Récuperation des informations de le fichier de configuration
+15:46:07  ---  Creation de la socket sur le port 50000 avec l ip 10.59.22.32
+00:36:32  ---  Récuperation des informations de le fichier de configuration
+00:36:32  ---  Creation de la socket sur le port 50000 avec l ip localhost
+00:36:32  ---  Bind OK00:36:45  ---  Login valide de Damien
+00:36:45  ---  Getting Next Departure
+00:37:02  ---  Login valide de Damien
+00:37:02  ---  Getting Next Departure
+00:38:21  ---  Interruption par le client : SIGINT
+00:40:52  ---  Récuperation des informations de le fichier de configuration
+00:40:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+00:40:52  ---  Bind OK00:41:02  ---  Login valide de Damien
+00:41:02  ---  Getting Next Departure
+00:41:08  ---  Getting begin loading
+01:09:05  ---  Interruption par le client : SIGINT
+13:59:10  ---  Récuperation des informations de le fichier de configuration
+13:59:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+13:59:10  ---  Bind OK14:01:17  ---  Login valide de Damien
+14:01:19  ---  Getting Next Departure
+14:01:45  ---  Ferry Leaving
+14:01:48  ---  Ferry Leaving
+14:03:04  ---  Récuperation des informations de le fichier de configuration
+14:03:04  ---  Creation de la socket sur le port 50000 avec l ip localhost
+14:03:04  ---  Bind OK14:03:18  ---  Login valide de Damien
+14:03:20  ---  Getting Next Departure
+14:03:22  ---  Ferry Leaving
+14:04:10  ---  Ferry Leaving
+14:04:14  ---  Ferry Leaving
+14:04:18  ---  Ferry Leaving
+14:04:21  ---  Ferry Leaving
+14:04:25  ---  Ferry Leaving
+14:04:42  ---  Getting begin loading
+14:04:53  ---  Getting begin loading
+14:04:59  ---  Getting begin loading
+14:05:04  ---  Notify End Loading
+14:05:06  ---  Notify End Loading
+14:05:09  ---  Notify End Loading
+14:05:19  ---  Ferry Leaving
+14:06:36  ---  Getting begin loading
+14:06:38  ---  Notify End Loading
+14:06:40  ---  Getting begin loading
+14:06:42  ---  Ferry Leaving
+14:06:44  ---  Ferry Leaving
+14:06:45  ---  Notify End Loading
+14:06:47  ---  Getting begin loading
+14:07:28  ---  Ferry Leaving
+14:14:20  ---  Login valide de Damien
+14:14:22  ---  Getting Next Departure
+14:14:41  ---  Ask for ferry
+14:14:45  ---  Getting Next Departure
+14:14:57  ---  Login valide de Damien
+14:14:59  ---  Getting Next Departure
+14:15:00  ---  Getting begin loading
+14:15:03  ---  Getting begin loading
+14:15:40  ---  Login valide de Damien
+14:15:42  ---  Getting Next Departure
+14:15:47  ---  Ask for ferry
+14:15:51  ---  Getting Next Departure
+14:16:28  ---  Getting begin loading
+14:16:30  ---  Notify End Loading
+14:16:31  ---  Ferry Leaving
+14:16:41  ---  Login valide de Damien
+14:16:43  ---  Getting Next Departure
+14:17:10  ---  Login valide de Damien
+14:17:12  ---  Getting Next Departure
+14:17:41  ---  Ferry Arriving
+14:17:45  ---  Getting Next Departure
+14:27:04  ---  Login valide de Damien
+14:27:06  ---  Getting Next Departure
+14:27:59  ---  Récuperation des informations de le fichier de configuration
+14:27:59  ---  Creation de la socket sur le port 50000 avec l ip localhost
+14:28:13  ---  Récuperation des informations de le fichier de configuration
+14:28:13  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:28:13  ---  Bind OK14:28:20  ---  Login valide de Damien
+14:28:22  ---  Getting Next Departure
+14:29:13  ---  Récuperation des informations de le fichier de configuration
+14:29:13  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:29:23  ---  Récuperation des informations de le fichier de configuration
+14:29:23  ---  Creation de la socket sur le port 50002 avec l ip localhost
+14:29:23  ---  Bind OK14:29:31  ---  Login valide de Damien
+14:29:33  ---  Getting Next Departure
+14:37:00  ---  Récuperation des informations de le fichier de configuration
+14:37:00  ---  Creation de la socket sur le port 50002 avec l ip localhost
+14:37:00  ---  Bind OK14:37:11  ---  Login valide de Damien
+14:37:13  ---  Getting Next Departure
+14:37:27  ---  Récuperation des informations de le fichier de configuration
+14:37:27  ---  Creation de la socket sur le port 50002 avec l ip localhost
+14:37:38  ---  Récuperation des informations de le fichier de configuration
+14:37:38  ---  Creation de la socket sur le port 50003 avec l ip localhost
+14:37:38  ---  Bind OK14:37:49  ---  Login valide de Damien
+14:37:51  ---  Getting Next Departure
+14:40:03  ---  Récuperation des informations de le fichier de configuration
+14:40:03  ---  Creation de la socket sur le port 50003 avec l ip localhost
+14:40:16  ---  Récuperation des informations de le fichier de configuration
+14:40:16  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:40:16  ---  Bind OK14:40:19  ---  Interruption par le client : SIGINT
+14:40:26  ---  Login valide de Damien
+14:40:28  ---  Getting Next Departure
+14:43:01  ---  Interruption par le client : SIGINT
+14:43:04  ---  Récuperation des informations de le fichier de configuration
+14:43:04  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:43:04  ---  Bind OK14:43:11  ---  Login valide de Damien
+14:43:13  ---  Getting Next Departure
+14:44:46  ---  Interruption par le client : SIGINT
+14:44:50  ---  Récuperation des informations de le fichier de configuration
+14:44:50  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:44:50  ---  Bind OK14:45:00  ---  Login valide de Damien
+14:45:02  ---  Getting Next Departure
+14:45:51  ---  Interruption par le client : SIGINT
+14:45:56  ---  Récuperation des informations de le fichier de configuration
+14:45:56  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:46:09  ---  Récuperation des informations de le fichier de configuration
+14:46:09  ---  Creation de la socket sur le port 50002 avec l ip localhost
+14:46:09  ---  Bind OK14:46:24  ---  Login valide de Damien
+14:46:26  ---  Getting Next Departure
+14:46:47  ---  Interruption par le client : SIGINT
+14:47:49  ---  Récuperation des informations de le fichier de configuration
+14:47:49  ---  Creation de la socket sur le port 50002 avec l ip localhost
+14:47:49  ---  Bind OK14:47:52  ---  Récuperation des informations de le fichier de configuration
+14:47:52  ---  Creation de la socket sur le port 50002 avec l ip localhost
+14:47:59  ---  Login valide de Damien
+14:48:01  ---  Getting Next Departure
+14:48:09  ---  Interruption par le client : SIGINT
+14:49:27  ---  Récuperation des informations de le fichier de configuration
+14:49:27  ---  Creation de la socket sur le port 50002 avec l ip localhost
+14:49:27  ---  Bind OK14:49:34  ---  Login valide de Damien
+14:49:36  ---  Getting Next Departure
+14:49:47  ---  Ferry Leaving
+14:49:53  ---  Ferry Leaving
+14:52:45  ---  Récuperation des informations de le fichier de configuration
+14:52:45  ---  Creation de la socket sur le port 50002 avec l ip localhost
+14:52:45  ---  Bind OK14:52:55  ---  Login valide de Damien
+14:52:57  ---  Getting Next Departure
+14:53:02  ---  Ask for ferry
+14:53:06  ---  Getting Next Departure
+14:53:30  ---  Ferry Leaving
+14:54:07  ---  Interruption par le client : SIGINT
+15:00:23  ---  Récuperation des informations de le fichier de configuration
+15:00:23  ---  Creation de la socket sur le port 50002 avec l ip localhost
+15:00:23  ---  Bind OK15:00:30  ---  Login valide de Damien
+15:00:32  ---  Getting Next Departure
+15:00:40  ---  Ask for ferry
+15:00:44  ---  Getting Next Departure
+15:01:43  ---  Ferry Leaving
+15:02:19  ---  Ferry Leaving
+15:02:21  ---  Ferry Leaving
+15:02:22  ---  Ferry Leaving
+15:02:25  ---  Ferry Leaving
+15:02:56  ---  Getting begin loading
+15:03:07  ---  Login valide de Damien
+15:03:09  ---  Getting Next Departure
+15:03:13  ---  Notify End Loading
+15:03:15  ---  Notify End Loading
+15:03:17  ---  Getting begin loading
+15:03:19  ---  Notify End Loading
+15:03:21  ---  Notify End Loading
+15:03:23  ---  Ferry Leaving
+15:04:18  ---  Ferry Leaving
+15:05:51  ---  Interruption par le client : SIGINT
+15:07:04  ---  Récuperation des informations de le fichier de configuration
+15:07:04  ---  Creation de la socket sur le port 50002 avec l ip localhost
+15:07:04  ---  Bind OK15:07:13  ---  Login valide de Damien
+15:07:15  ---  Getting Next Departure
+15:08:33  ---  Ferry Leaving
+15:10:29  ---  Interruption par le client : SIGINT
+15:10:48  ---  Récuperation des informations de le fichier de configuration
+15:10:48  ---  Creation de la socket sur le port 50002 avec l ip localhost
+15:10:48  ---  Bind OK15:10:54  ---  Login valide de Damien
+15:10:56  ---  Getting Next Departure
+15:11:01  ---  Interruption par le client : SIGINT
+15:11:23  ---  Récuperation des informations de le fichier de configuration
+15:11:23  ---  Creation de la socket sur le port 50002 avec l ip localhost
+15:11:23  ---  Bind OK15:11:29  ---  Login valide de Damien
+15:11:31  ---  Getting Next Departure
+15:11:35  ---  Ferry Leaving
+15:14:09  ---  Interruption par le client : SIGINT
+15:14:17  ---  Récuperation des informations de le fichier de configuration
+15:14:17  ---  Creation de la socket sur le port 50002 avec l ip localhost
+15:14:17  ---  Bind OK15:14:30  ---  Login valide de Damien
+15:14:32  ---  Getting Next Departure
+15:15:13  ---  Ask for ferry
+15:17:04  ---  Interruption par le client : SIGINT
+15:17:12  ---  Récuperation des informations de le fichier de configuration
+15:17:12  ---  Creation de la socket sur le port 50002 avec l ip localhost
+15:17:12  ---  Bind OK15:17:38  ---  Login valide de Damien
+15:17:40  ---  Getting Next Departure
+15:17:51  ---  Ferry Leaving
+15:20:39  ---  Interruption par le client : SIGINT
+15:20:41  ---  Récuperation des informations de le fichier de configuration
+15:20:41  ---  Creation de la socket sur le port 50000 avec l ip localhost
+15:20:41  ---  Bind OK15:20:47  ---  Login valide de Damien
+15:20:49  ---  Getting Next Departure
+15:20:54  ---  Ask for ferry
+15:21:05  ---  Ask for ferry
+15:21:31  ---  Interruption par le client : SIGINT
+15:21:38  ---  Récuperation des informations de le fichier de configuration
+15:21:38  ---  Creation de la socket sur le port 50000 avec l ip localhost
+15:21:38  ---  Bind OK15:22:06  ---  Login valide de Damien
+15:22:08  ---  Getting Next Departure
+15:22:12  ---  Ferry Leaving
+15:22:18  ---  Getting Next Departure
+15:22:38  ---  Ask for ferry
+15:26:26  ---  Interruption par le client : SIGINT
+15:29:46  ---  Récuperation des informations de le fichier de configuration
+15:29:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+15:29:46  ---  Bind OK18:45:39  ---  Récuperation des informations de le fichier de configuration
+18:45:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:45:40  ---  Bind OK19:00:11  ---  Login valide de Miguel
+19:00:13  ---  Getting Next Departure
+19:00:25  ---  Login valide de Miguel
+19:00:27  ---  Getting Next Departure
+19:00:33  ---  Login valide de Miguel
+19:00:35  ---  Getting Next Departure
+19:00:40  ---  Login valide de Miguel
+19:00:42  ---  Getting Next Departure
+19:00:49  ---  Login valide de Miguel
+19:00:51  ---  Getting Next Departure
+19:02:35  ---  Interruption par le client : SIGINT
+19:03:59  ---  Récuperation des informations de le fichier de configuration
+19:03:59  ---  Creation de la socket sur le port 50000 avec l ip localhost
+19:03:59  ---  Bind OK19:09:46  ---  Login valide de Miguel
+19:09:48  ---  Getting Next Departure
+19:09:50  ---  Getting begin loading
+19:09:52  ---  Notify End Loading
+19:10:33  ---  Ferry Leaving
+19:12:32  ---  Interruption par le client : SIGINT
+20:17:26  ---  Récuperation des informations de le fichier de configuration
+20:17:26  ---  Creation de la socket sur le port 50000 avec l ip 192.168.1.151
+20:17:26  ---  Bind OK20:17:45  ---  Interruption par le client : SIGINT
+20:18:07  ---  Récuperation des informations de le fichier de configuration
+20:18:07  ---  Creation de la socket sur le port 50000 avec l ip 192.168.1.151
+20:18:07  ---  Bind OK20:18:24  ---  Login valide de Damien
+20:18:26  ---  Getting Next Departure
+20:19:44  ---  Récuperation des informations de le fichier de configuration
+20:19:44  ---  Creation de la socket sur le port 50000 avec l ip 192.168.1.151
+20:19:44  ---  Bind OK20:19:57  ---  Login valide de Damien
+20:19:59  ---  Getting Next Departure
+20:20:45  ---  Récuperation des informations de le fichier de configuration
+20:20:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:20:45  ---  Bind OK20:20:52  ---  Interruption par le client : SIGINT
+20:21:13  ---  Récuperation des informations de le fichier de configuration
+20:21:13  ---  Creation de la socket sur le port 50000 avec l ip 192.168.1.151
+20:21:13  ---  Bind OK20:21:21  ---  Login invalide de OHDamien
+20:23:59  ---  Login valide de Damien
+20:24:01  ---  Getting Next Departure
+20:24:51  ---  Récuperation des informations de le fichier de configuration
+20:24:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:24:51  ---  Bind OK20:25:01  ---  Login invalide de Damien
+20:25:18  ---  Login valide de Damien
+20:25:20  ---  Getting Next Departure
+20:27:01  ---  Récuperation des informations de le fichier de configuration
+20:27:01  ---  Creation de la socket sur le port 50000 avec l ip 192.168.1.151
+20:27:01  ---  Bind OK20:27:10  ---  Login valide de Damien
+20:27:12  ---  Getting Next Departure
+20:27:22  ---  Ask for ferry
+20:34:24  ---  Récuperation des informations de le fichier de configuration
+20:34:24  ---  Creation de la socket sur le port 50000 avec l ip 192.168.1.151
+20:38:24  ---  Récuperation des informations de le fichier de configuration
+20:38:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:38:24  ---  Bind OK20:38:48  ---  Login valide de Damien
+20:38:50  ---  Getting Next Departure
+20:39:00  ---  Getting begin loading
+20:39:05  ---  Notify End Loading
+20:39:08  ---  Ferry Leaving
+20:40:10  ---  Login valide de Damien
+20:40:12  ---  Getting Next Departure
+20:41:22  ---  Ask for ferry
+20:41:43  ---  Ask for ferry
+20:41:46  ---  Ask for ferry
+20:42:03  ---  Ask for ferry
+20:42:06  ---  Ask for ferry
+20:42:14  ---  Ask for ferry
+20:42:39  ---  Ask for ferry
+20:42:51  ---  Login valide de Damien
+20:42:53  ---  Getting Next Departure
+20:42:56  ---  Getting begin loading
+20:42:58  ---  Notify End Loading
+20:43:02  ---  Ferry Leaving
+20:43:11  ---  Login valide de Damien
+20:43:13  ---  Getting Next Departure
+20:43:24  ---  Ask for ferry
+20:44:36  ---  Ask for ferry
+20:49:16  ---  Interruption par le client : SIGINT
+20:50:07  ---  Récuperation des informations de le fichier de configuration
+20:50:07  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:50:10  ---  Récuperation des informations de le fichier de configuration
+20:50:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:50:11  ---  Récuperation des informations de le fichier de configuration
+20:50:11  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:50:22  ---  Récuperation des informations de le fichier de configuration
+20:50:22  ---  Creation de la socket sur le port 50001 avec l ip localhost
+20:50:22  ---  Bind OK20:50:33  ---  Login valide de Damien
+20:50:35  ---  Getting Next Departure
+20:50:51  ---  Getting begin loading
+20:50:52  ---  Notify End Loading
+20:50:54  ---  Ferry Leaving
+20:50:59  ---  Getting Next Departure
+20:51:07  ---  Ask for ferry
+20:51:20  ---  Ask for ferry
+20:53:03  ---  Login valide de Damien
+20:53:05  ---  Getting Next Departure
+20:53:07  ---  Getting begin loading
+20:53:09  ---  Ferry Leaving
+20:53:14  ---  Getting Next Departure
+20:53:31  ---  Ask for ferry
+20:54:16  ---  Interruption par le client : SIGINT
+20:54:18  ---  Récuperation des informations de le fichier de configuration
+20:54:18  ---  Creation de la socket sur le port 50001 avec l ip localhost
+20:54:18  ---  Bind OK20:54:28  ---  Login valide de Damien
+20:54:30  ---  Getting Next Departure
+20:54:31  ---  Getting begin loading
+20:54:33  ---  Ferry Leaving
+20:54:38  ---  Getting Next Departure
+20:54:50  ---  Ask for ferry
+20:54:54  ---  Getting Next Departure
+20:55:02  ---  Getting begin loading
+20:55:04  ---  Notify End Loading
+20:55:06  ---  Getting begin loading
+20:55:08  ---  Ferry Leaving
+20:55:13  ---  Getting Next Departure
+20:55:14  ---  Ask for ferry
+20:55:18  ---  Getting Next Departure
+20:55:28  ---  Ferry Leaving
+20:55:33  ---  Getting Next Departure
+20:55:43  ---  Ask for ferry
+20:55:47  ---  Getting Next Departure
+20:59:41  ---  Interruption par le client : SIGINT
+20:59:55  ---  Récuperation des informations de le fichier de configuration
+20:59:55  ---  Creation de la socket sur le port 50001 avec l ip localhost
+20:59:55  ---  Bind OK21:00:01  ---  Login valide de Damien
+21:00:03  ---  Getting Next Departure
+21:01:38  ---  Interruption par le client : SIGINT
+21:01:42  ---  Récuperation des informations de le fichier de configuration
+21:01:42  ---  Creation de la socket sur le port 50001 avec l ip localhost
+21:01:42  ---  Bind OK21:01:56  ---  Login valide de Damien
+21:01:58  ---  Getting Next Departure
+21:04:00  ---  Login valide de Damien
+21:04:02  ---  Getting Next Departure
+21:05:04  ---  Interruption par le client : SIGINT
+21:05:09  ---  Récuperation des informations de le fichier de configuration
+21:05:09  ---  Creation de la socket sur le port 50001 avec l ip localhost
+21:05:09  ---  Bind OK21:05:20  ---  Login valide de Damien
+21:05:22  ---  Getting Next Departure
+21:09:46  ---  Interruption par le client : SIGINT
+21:09:48  ---  Récuperation des informations de le fichier de configuration
+21:09:48  ---  Creation de la socket sur le port 50001 avec l ip localhost
+21:09:48  ---  Bind OK21:09:50  ---  Interruption par le client : SIGINT
+21:09:52  ---  Récuperation des informations de le fichier de configuration
+21:09:52  ---  Creation de la socket sur le port 50001 avec l ip localhost
+21:09:52  ---  Bind OK21:12:18  ---  Login valide de Damien
+21:12:20  ---  Getting Next Departure
+21:15:00  ---  Login valide de Damien
+21:15:02  ---  Getting Next Departure
+21:15:06  ---  Ferry Leaving
+21:15:11  ---  Getting Next Departure
+21:15:21  ---  Ask for ferry
+21:15:25  ---  Getting Next Departure
+21:34:40  ---  Login valide de Damien
+21:34:42  ---  Getting Next Departure
+21:36:47  ---  Ferry Leaving
+21:36:52  ---  Getting Next Departure
+21:39:27  ---  Ask for ferry
+21:39:31  ---  Getting Next Departure
+22:15:15  ---  Getting begin loading
+22:15:19  ---  Notify End Loading
+22:15:21  ---  Getting begin loading
+22:15:22  ---  Notify End Loading
+22:15:24  ---  Ferry Leaving
+22:15:29  ---  Getting Next Departure
+22:15:31  ---  Ask for ferry
+22:15:35  ---  Getting Next Departure
+22:15:40  ---  Interruption par le client : SIGINT
+22:21:14  ---  Récuperation des informations de le fichier de configuration
+22:21:14  ---  Creation de la socket sur le port 50001 avec l ip localhost
+22:21:14  ---  Bind OK22:21:25  ---  Login valide de Damien
+22:21:27  ---  Getting Next Departure
+03:51:49  ---  Récuperation des informations de le fichier de configuration
+03:51:49  ---  Creation de la socket sur le port 50001 avec l ip localhost
+03:51:49  ---  Bind OK03:52:08  ---  Login valide de Damien
+03:52:10  ---  Getting Next Departure
+03:52:29  ---  Login valide de Damien
+03:52:31  ---  Getting Next Departure
+03:52:35  ---  Ferry Leaving
+03:53:38  ---  Login valide de Damien
+03:53:40  ---  Getting Next Departure
+03:53:44  ---  Ferry Leaving
+03:53:49  ---  Getting Next Departure
+03:54:14  ---  Ask for ferry
+03:54:18  ---  Getting Next Departure
+03:54:27  ---  Getting begin loading
+03:54:29  ---  Getting begin loading
+03:54:31  ---  Getting begin loading
+03:54:44  ---  Login valide de Damien
+03:54:46  ---  Getting Next Departure
+03:54:49  ---  Getting begin loading
+03:54:50  ---  Notify End Loading
+03:57:58  ---  Interruption par le client : SIGINT
+04:25:16  ---  Récuperation des informations de le fichier de configuration
+04:25:16  ---  Creation de la socket sur le port 50001 avec l ip 10.59.22.72
+04:25:16  ---  Bind OK04:47:52  ---  Login valide de August
+04:47:54  ---  Getting Next Departure
+04:51:32  ---  Ask for ferry
+04:51:37  ---  Getting Next Departure
+04:55:14  ---  Getting begin loading
+04:55:28  ---  Notify End Loading
+04:55:42  ---  Login valide de Damien
+04:55:44  ---  Getting Next Departure
+04:55:46  ---  Getting begin loading
+04:55:49  ---  Notify End Loading
+21:25:03  ---  Récuperation des informations de le fichier de configuration
+21:25:03  ---  Creation de la socket sur le port 50001 avec l ip 10.59.22.72
+22:14:12  ---  Récuperation des informations de le fichier de configuration
+22:14:13  ---  Creation de la socket sur le port 50001 avec l ip 10.59.22.72
+12:46:38  ---  Récuperation des informations de le fichier de configuration
+12:46:38  ---  Creation de la socket sur le port 50001 avec l ip 10.59.22.72
+12:47:49  ---  Récuperation des informations de le fichier de configuration
+12:47:49  ---  Creation de la socket sur le port 50001 avec l ip localhost
+12:47:49  ---  Bind OK12:49:43  ---  Login valide de Damien
+12:49:45  ---  Getting Next Departure
+12:49:48  ---  Getting begin loading
+12:49:54  ---  Notify End Loading
+12:49:59  ---  Ferry Leaving
+12:50:09  ---  Getting Next Departure
+12:50:16  ---  Ask for ferry
+12:50:23  ---  Getting Next Departure
+12:50:40  ---  Getting begin loading
+12:50:44  ---  Notify End Loading
+12:50:48  ---  Ferry Leaving
+12:51:09  ---  Login valide de Damien
+12:51:11  ---  Getting Next Departure
+12:51:17  ---  Ferry Leaving
+12:51:27  ---  Getting Next Departure
+12:51:55  ---  Ferry Arriving
+12:52:02  ---  Getting Next Departure
+12:52:16  ---  Interruption par le client : SIGINT
+13:53:59  ---  Récuperation des informations de le fichier de configuration
+13:53:59  ---  Creation de la socket sur le port 50001 avec l ip localhost
+13:53:59  ---  Bind OK14:00:49  ---  Interruption par le client : SIGINT
+14:01:12  ---  Récuperation des informations de le fichier de configuration
+14:01:12  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:01:12  ---  Bind OK14:02:18  ---  Interruption par le client : SIGINT
+14:05:20  ---  Récuperation des informations de le fichier de configuration
+14:05:20  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:05:20  ---  Bind OK14:05:30  ---  Interruption par le client : SIGINT
+14:08:23  ---  Récuperation des informations de le fichier de configuration
+14:08:23  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:08:23  ---  Bind OK14:09:19  ---  Interruption par le client : SIGINT
+14:09:21  ---  Récuperation des informations de le fichier de configuration
+14:09:21  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:09:21  ---  Bind OK14:17:09  ---  Interruption par le client : SIGINT
+14:17:36  ---  Récuperation des informations de le fichier de configuration
+14:17:36  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:17:36  ---  Bind OK14:38:49  ---  Interruption par le client : SIGINT
+14:38:51  ---  Récuperation des informations de le fichier de configuration
+14:38:51  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:38:51  ---  Bind OK14:40:21  ---  Interruption par le client : SIGINT
+14:40:28  ---  Récuperation des informations de le fichier de configuration
+14:40:28  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:40:28  ---  Bind OK14:40:43  ---  Interruption par le client : SIGINT
+14:40:45  ---  Récuperation des informations de le fichier de configuration
+14:40:45  ---  Creation de la socket sur le port 50001 avec l ip localhost
+14:40:45  ---  Bind OK14:40:46  ---  Interruption par le client : SIGINT
+16:10:19  ---  Récuperation des informations de le fichier de configuration
+16:10:19  ---  Creation de la socket sur le port 50001 avec l ip localhost
+16:10:19  ---  Bind OK16:20:34  ---  Interruption par le client : SIGINT
+16:23:48  ---  Récuperation des informations de le fichier de configuration
+16:23:48  ---  Creation de la socket sur le port 50001 avec l ip localhost
+16:23:48  ---  Bind OK16:28:27  ---  Interruption par le client : SIGINT
+16:28:58  ---  Récuperation des informations de le fichier de configuration
+16:28:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+16:28:58  ---  Bind OK16:29:32  ---  Interruption par le client : SIGINT
+16:34:07  ---  Récuperation des informations de le fichier de configuration
+16:34:07  ---  Creation de la socket sur le port 50000 avec l ip localhost
+16:34:07  ---  Bind OK16:35:06  ---  Interruption par le client : SIGINT
+17:31:04  ---  Récuperation des informations de le fichier de configuration
+17:31:04  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:31:04  ---  Bind OK17:31:38  ---  Interruption par le client : SIGINT
+17:31:39  ---  Récuperation des informations de le fichier de configuration
+17:31:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:31:39  ---  Bind OK17:31:40  ---  Interruption par le client : SIGINT
+17:31:46  ---  Récuperation des informations de le fichier de configuration
+17:31:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:31:46  ---  Bind OK17:31:47  ---  Interruption par le client : SIGINT
+17:31:56  ---  Récuperation des informations de le fichier de configuration
+17:31:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:31:56  ---  Bind OK17:32:01  ---  Interruption par le client : SIGINT
+17:32:04  ---  Récuperation des informations de le fichier de configuration
+17:32:04  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:32:04  ---  Bind OK17:33:19  ---  Récuperation des informations de le fichier de configuration
+17:33:19  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:19  ---  Bind OK17:33:25  ---  Login valide de Damien
+17:33:27  ---  Getting Next Departure
+17:33:31  ---  Interruption par le client : SIGINT
+17:33:38  ---  Récuperation des informations de le fichier de configuration
+17:33:38  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:42  ---  Récuperation des informations de le fichier de configuration
+17:33:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:43  ---  Récuperation des informations de le fichier de configuration
+17:33:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:44  ---  Récuperation des informations de le fichier de configuration
+17:33:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:45  ---  Récuperation des informations de le fichier de configuration
+17:33:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:46  ---  Récuperation des informations de le fichier de configuration
+17:33:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:46  ---  Récuperation des informations de le fichier de configuration
+17:33:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:47  ---  Récuperation des informations de le fichier de configuration
+17:33:47  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:48  ---  Récuperation des informations de le fichier de configuration
+17:33:48  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:49  ---  Récuperation des informations de le fichier de configuration
+17:33:49  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:49  ---  Récuperation des informations de le fichier de configuration
+17:33:49  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:50  ---  Récuperation des informations de le fichier de configuration
+17:33:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:51  ---  Récuperation des informations de le fichier de configuration
+17:33:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:51  ---  Récuperation des informations de le fichier de configuration
+17:33:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:33:52  ---  Récuperation des informations de le fichier de configuration
+17:33:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:36:39  ---  Récuperation des informations de le fichier de configuration
+17:36:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:36:39  ---  Bind OK17:39:52  ---  Récuperation des informations de le fichier de configuration
+17:39:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:39:52  ---  Bind OK17:40:00  ---  Login valide de Damien
+17:40:02  ---  Getting Next Departure
+17:40:15  ---  Interruption par le client : SIGINT
+17:45:53  ---  Récuperation des informations de le fichier de configuration
+17:45:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:45:53  ---  Bind OK17:49:43  ---  Récuperation des informations de le fichier de configuration
+17:49:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:49:43  ---  Bind OK17:49:49  ---  Interruption par le client : SIGINT
+17:49:53  ---  Récuperation des informations de le fichier de configuration
+17:49:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:49:53  ---  Bind OK17:54:10  ---  Récuperation des informations de le fichier de configuration
+17:54:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:54:10  ---  Bind OK17:56:26  ---  Interruption par le client : SIGINT
+17:59:34  ---  Récuperation des informations de le fichier de configuration
+17:59:34  ---  Creation de la socket sur le port 50000 avec l ip localhost
+17:59:34  ---  Bind OK18:00:02  ---  Interruption par le client : SIGINT
+18:00:21  ---  Récuperation des informations de le fichier de configuration
+18:00:21  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:00:21  ---  Bind OK18:01:02  ---  Interruption par le client : SIGINT
+18:01:05  ---  Récuperation des informations de le fichier de configuration
+18:01:05  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:01:05  ---  Bind OK18:02:11  ---  Interruption par le client : SIGINT
+18:07:51  ---  Récuperation des informations de le fichier de configuration
+18:07:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:07:51  ---  Bind OK18:08:21  ---  Interruption par le client : SIGINT
+18:10:03  ---  Récuperation des informations de le fichier de configuration
+18:10:03  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:10:03  ---  Bind OK18:10:53  ---  Interruption par le client : SIGINT
+18:11:55  ---  Récuperation des informations de le fichier de configuration
+18:11:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:11:55  ---  Bind OK18:12:30  ---  Interruption par le client : SIGINT
+18:12:34  ---  Récuperation des informations de le fichier de configuration
+18:12:34  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:12:34  ---  Bind OK18:13:07  ---  Interruption par le client : SIGINT
+18:13:11  ---  Récuperation des informations de le fichier de configuration
+18:13:11  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:13:11  ---  Bind OK18:16:34  ---  Récuperation des informations de le fichier de configuration
+18:16:34  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:16:34  ---  Bind OK18:20:37  ---  Récuperation des informations de le fichier de configuration
+18:20:37  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:20:37  ---  Bind OK18:22:15  ---  Récuperation des informations de le fichier de configuration
+18:22:15  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:22:15  ---  Bind OK18:25:08  ---  Récuperation des informations de le fichier de configuration
+18:25:08  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:25:08  ---  Bind OK18:25:45  ---  Interruption par le client : SIGINT
+18:27:18  ---  Récuperation des informations de le fichier de configuration
+18:27:18  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:27:18  ---  Bind OK18:27:24  ---  Login valide de Damien
+18:27:27  ---  Getting Next Departure
+18:27:34  ---  Login valide de Damien
+18:27:36  ---  Getting Next Departure
+18:30:04  ---  Récuperation des informations de le fichier de configuration
+18:30:04  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:06  ---  Récuperation des informations de le fichier de configuration
+18:30:06  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:07  ---  Récuperation des informations de le fichier de configuration
+18:30:07  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:07  ---  Récuperation des informations de le fichier de configuration
+18:30:07  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:08  ---  Récuperation des informations de le fichier de configuration
+18:30:08  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:08  ---  Récuperation des informations de le fichier de configuration
+18:30:08  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:09  ---  Récuperation des informations de le fichier de configuration
+18:30:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:10  ---  Récuperation des informations de le fichier de configuration
+18:30:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:10  ---  Récuperation des informations de le fichier de configuration
+18:30:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:11  ---  Récuperation des informations de le fichier de configuration
+18:30:11  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:12  ---  Récuperation des informations de le fichier de configuration
+18:30:12  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:13  ---  Récuperation des informations de le fichier de configuration
+18:30:13  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:15  ---  Récuperation des informations de le fichier de configuration
+18:30:15  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:30:17  ---  Récuperation des informations de le fichier de configuration
+18:30:17  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:45:31  ---  Récuperation des informations de le fichier de configuration
+18:45:31  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:45:31  ---  Bind OK18:46:42  ---  Interruption par le client : SIGINT
+18:47:39  ---  Récuperation des informations de le fichier de configuration
+18:47:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:47:39  ---  Bind OK18:47:59  ---  Interruption par le client : SIGINT
+18:48:09  ---  Récuperation des informations de le fichier de configuration
+18:48:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:48:09  ---  Bind OK18:50:13  ---  Récuperation des informations de le fichier de configuration
+18:50:13  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:50:13  ---  Bind OK18:51:19  ---  Login valide de Damien
+18:51:21  ---  Getting Next Departure
+18:51:51  ---  Getting begin loading
+18:56:32  ---  Interruption par le client : SIGINT
+18:57:06  ---  Récuperation des informations de le fichier de configuration
+18:57:06  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:57:19  ---  Récuperation des informations de le fichier de configuration
+18:57:19  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:57:39  ---  Récuperation des informations de le fichier de configuration
+18:57:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+18:57:39  ---  Bind OK19:01:40  ---  Login valide de Damien
+19:01:42  ---  Getting Next Departure
+19:06:38  ---  Interruption par le client : SIGINT
+19:07:27  ---  Récuperation des informations de le fichier de configuration
+19:07:27  ---  Creation de la socket sur le port 50000 avec l ip localhost
+19:07:29  ---  Récuperation des informations de le fichier de configuration
+19:07:29  ---  Creation de la socket sur le port 50000 avec l ip localhost
+19:08:04  ---  Récuperation des informations de le fichier de configuration
+19:08:04  ---  Creation de la socket sur le port 50000 avec l ip localhost
+19:08:04  ---  Bind OK19:08:11  ---  Login invalide de Damien
+19:08:17  ---  Login valide de Damien
+19:08:19  ---  Getting Next Departure
+19:12:11  ---  Interruption par le client : SIGINT
+19:12:24  ---  Récuperation des informations de le fichier de configuration
+19:12:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+19:13:32  ---  Récuperation des informations de le fichier de configuration
+19:13:32  ---  Creation de la socket sur le port 50000 avec l ip localhost
+19:13:32  ---  Bind OK19:14:04  ---  Login valide de Damien
+19:14:06  ---  Getting Next Departure
+19:14:33  ---  Getting Next Departure
+19:14:36  ---  Getting begin loading
+20:38:03  ---  Récuperation des informations de le fichier de configuration
+20:38:03  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:38:03  ---  Bind OK20:41:24  ---  Récuperation des informations de le fichier de configuration
+20:41:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:41:24  ---  Bind OK20:42:15  ---  Récuperation des informations de le fichier de configuration
+20:42:15  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:42:17  ---  Récuperation des informations de le fichier de configuration
+20:42:17  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:42:18  ---  Récuperation des informations de le fichier de configuration
+20:42:18  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:42:18  ---  Récuperation des informations de le fichier de configuration
+20:42:18  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:42:18  ---  Récuperation des informations de le fichier de configuration
+20:42:18  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:58:09  ---  Récuperation des informations de le fichier de configuration
+20:58:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:58:09  ---  Bind OK20:58:14  ---  Interruption par le client : SIGINT
+20:58:35  ---  Récuperation des informations de le fichier de configuration
+20:58:35  ---  Creation de la socket sur le port 50000 avec l ip localhost
+20:58:35  ---  Bind OK20:58:49  ---  Login valide de Damien
+20:58:51  ---  Getting Next Departure
+20:59:23  ---  Getting begin loading
+20:59:28  ---  Notify End Loading
+20:59:34  ---  Interruption par le client : SIGINT
+21:00:06  ---  Récuperation des informations de le fichier de configuration
+21:00:06  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:07  ---  Récuperation des informations de le fichier de configuration
+21:00:07  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:07  ---  Récuperation des informations de le fichier de configuration
+21:00:07  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:08  ---  Récuperation des informations de le fichier de configuration
+21:00:08  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:08  ---  Récuperation des informations de le fichier de configuration
+21:00:08  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:08  ---  Récuperation des informations de le fichier de configuration
+21:00:08  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:08  ---  Récuperation des informations de le fichier de configuration
+21:00:08  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:09  ---  Récuperation des informations de le fichier de configuration
+21:00:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:09  ---  Récuperation des informations de le fichier de configuration
+21:00:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:09  ---  Récuperation des informations de le fichier de configuration
+21:00:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:09  ---  Récuperation des informations de le fichier de configuration
+21:00:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:09  ---  Récuperation des informations de le fichier de configuration
+21:00:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:10  ---  Récuperation des informations de le fichier de configuration
+21:00:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:10  ---  Récuperation des informations de le fichier de configuration
+21:00:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:11  ---  Récuperation des informations de le fichier de configuration
+21:00:11  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:11  ---  Récuperation des informations de le fichier de configuration
+21:00:11  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:11  ---  Récuperation des informations de le fichier de configuration
+21:00:11  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:11  ---  Récuperation des informations de le fichier de configuration
+21:00:11  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:20  ---  Récuperation des informations de le fichier de configuration
+21:00:20  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:21  ---  Récuperation des informations de le fichier de configuration
+21:00:21  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:22  ---  Récuperation des informations de le fichier de configuration
+21:00:22  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:22  ---  Récuperation des informations de le fichier de configuration
+21:00:22  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:22  ---  Récuperation des informations de le fichier de configuration
+21:00:22  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:22  ---  Récuperation des informations de le fichier de configuration
+21:00:22  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:23  ---  Récuperation des informations de le fichier de configuration
+21:00:23  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:23  ---  Récuperation des informations de le fichier de configuration
+21:00:23  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:23  ---  Récuperation des informations de le fichier de configuration
+21:00:23  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:23  ---  Récuperation des informations de le fichier de configuration
+21:00:23  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:24  ---  Récuperation des informations de le fichier de configuration
+21:00:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:24  ---  Récuperation des informations de le fichier de configuration
+21:00:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:24  ---  Récuperation des informations de le fichier de configuration
+21:00:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:24  ---  Récuperation des informations de le fichier de configuration
+21:00:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:25  ---  Récuperation des informations de le fichier de configuration
+21:00:25  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:25  ---  Récuperation des informations de le fichier de configuration
+21:00:25  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:25  ---  Récuperation des informations de le fichier de configuration
+21:00:25  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:25  ---  Récuperation des informations de le fichier de configuration
+21:00:25  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:26  ---  Récuperation des informations de le fichier de configuration
+21:00:26  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:26  ---  Récuperation des informations de le fichier de configuration
+21:00:26  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:26  ---  Récuperation des informations de le fichier de configuration
+21:00:26  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:26  ---  Récuperation des informations de le fichier de configuration
+21:00:26  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:27  ---  Récuperation des informations de le fichier de configuration
+21:00:27  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:27  ---  Récuperation des informations de le fichier de configuration
+21:00:27  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:27  ---  Récuperation des informations de le fichier de configuration
+21:00:27  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:28  ---  Récuperation des informations de le fichier de configuration
+21:00:28  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:28  ---  Récuperation des informations de le fichier de configuration
+21:00:28  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:29  ---  Récuperation des informations de le fichier de configuration
+21:00:29  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:29  ---  Récuperation des informations de le fichier de configuration
+21:00:29  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:29  ---  Récuperation des informations de le fichier de configuration
+21:00:29  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:30  ---  Récuperation des informations de le fichier de configuration
+21:00:30  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:30  ---  Récuperation des informations de le fichier de configuration
+21:00:30  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:31  ---  Récuperation des informations de le fichier de configuration
+21:00:31  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:31  ---  Récuperation des informations de le fichier de configuration
+21:00:31  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:31  ---  Récuperation des informations de le fichier de configuration
+21:00:31  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:32  ---  Récuperation des informations de le fichier de configuration
+21:00:32  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:32  ---  Récuperation des informations de le fichier de configuration
+21:00:32  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:33  ---  Récuperation des informations de le fichier de configuration
+21:00:33  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:33  ---  Récuperation des informations de le fichier de configuration
+21:00:33  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:33  ---  Récuperation des informations de le fichier de configuration
+21:00:33  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:34  ---  Récuperation des informations de le fichier de configuration
+21:00:34  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:34  ---  Récuperation des informations de le fichier de configuration
+21:00:34  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:35  ---  Récuperation des informations de le fichier de configuration
+21:00:35  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:35  ---  Récuperation des informations de le fichier de configuration
+21:00:35  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:36  ---  Récuperation des informations de le fichier de configuration
+21:00:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:36  ---  Récuperation des informations de le fichier de configuration
+21:00:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:37  ---  Récuperation des informations de le fichier de configuration
+21:00:37  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:00:37  ---  Bind OK21:00:58  ---  Login valide de Damien
+21:01:00  ---  Getting Next Departure
+21:01:36  ---  Récuperation des informations de le fichier de configuration
+21:01:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:02:32  ---  Récuperation des informations de le fichier de configuration
+21:02:32  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:02:32  ---  Bind OK21:02:38  ---  Login valide de Damien
+21:02:40  ---  Getting Next Departure
+21:03:28  ---  Interruption par le client : SIGINT
+21:03:44  ---  Récuperation des informations de le fichier de configuration
+21:03:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:44  ---  Récuperation des informations de le fichier de configuration
+21:03:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:45  ---  Récuperation des informations de le fichier de configuration
+21:03:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:48  ---  Récuperation des informations de le fichier de configuration
+21:03:48  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:50  ---  Récuperation des informations de le fichier de configuration
+21:03:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:50  ---  Récuperation des informations de le fichier de configuration
+21:03:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:50  ---  Récuperation des informations de le fichier de configuration
+21:03:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:50  ---  Récuperation des informations de le fichier de configuration
+21:03:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:51  ---  Récuperation des informations de le fichier de configuration
+21:03:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:51  ---  Récuperation des informations de le fichier de configuration
+21:03:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:51  ---  Récuperation des informations de le fichier de configuration
+21:03:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:51  ---  Récuperation des informations de le fichier de configuration
+21:03:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:51  ---  Récuperation des informations de le fichier de configuration
+21:03:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:51  ---  Récuperation des informations de le fichier de configuration
+21:03:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:52  ---  Récuperation des informations de le fichier de configuration
+21:03:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:52  ---  Récuperation des informations de le fichier de configuration
+21:03:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:52  ---  Récuperation des informations de le fichier de configuration
+21:03:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:52  ---  Récuperation des informations de le fichier de configuration
+21:03:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:52  ---  Récuperation des informations de le fichier de configuration
+21:03:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:53  ---  Récuperation des informations de le fichier de configuration
+21:03:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:53  ---  Récuperation des informations de le fichier de configuration
+21:03:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:53  ---  Récuperation des informations de le fichier de configuration
+21:03:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:53  ---  Récuperation des informations de le fichier de configuration
+21:03:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:53  ---  Récuperation des informations de le fichier de configuration
+21:03:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:53  ---  Récuperation des informations de le fichier de configuration
+21:03:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:54  ---  Récuperation des informations de le fichier de configuration
+21:03:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:54  ---  Récuperation des informations de le fichier de configuration
+21:03:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:54  ---  Récuperation des informations de le fichier de configuration
+21:03:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:54  ---  Récuperation des informations de le fichier de configuration
+21:03:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:54  ---  Récuperation des informations de le fichier de configuration
+21:03:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:55  ---  Récuperation des informations de le fichier de configuration
+21:03:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:55  ---  Récuperation des informations de le fichier de configuration
+21:03:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:55  ---  Récuperation des informations de le fichier de configuration
+21:03:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:55  ---  Récuperation des informations de le fichier de configuration
+21:03:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:56  ---  Récuperation des informations de le fichier de configuration
+21:03:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:56  ---  Récuperation des informations de le fichier de configuration
+21:03:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:56  ---  Récuperation des informations de le fichier de configuration
+21:03:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:57  ---  Récuperation des informations de le fichier de configuration
+21:03:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:57  ---  Récuperation des informations de le fichier de configuration
+21:03:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:58  ---  Récuperation des informations de le fichier de configuration
+21:03:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:58  ---  Récuperation des informations de le fichier de configuration
+21:03:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:58  ---  Récuperation des informations de le fichier de configuration
+21:03:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:59  ---  Récuperation des informations de le fichier de configuration
+21:03:59  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:03:59  ---  Récuperation des informations de le fichier de configuration
+21:03:59  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:04:45  ---  Récuperation des informations de le fichier de configuration
+21:04:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:04:45  ---  Bind OK21:05:08  ---  Login valide de Damien
+21:05:10  ---  Getting Next Departure
+21:05:30  ---  Getting begin loading
+21:08:17  ---  Récuperation des informations de le fichier de configuration
+21:08:17  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:08:17  ---  Bind OK21:08:25  ---  Login valide de Damien
+21:08:27  ---  Getting Next Departure
+21:09:51  ---  Récuperation des informations de le fichier de configuration
+21:09:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:11:08  ---  Récuperation des informations de le fichier de configuration
+21:11:08  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:11:08  ---  Bind OK21:11:35  ---  Interruption par le client : SIGINT
+21:11:36  ---  Récuperation des informations de le fichier de configuration
+21:11:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:11:36  ---  Bind OK21:12:27  ---  Interruption par le client : SIGINT
+21:12:39  ---  Récuperation des informations de le fichier de configuration
+21:12:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:40  ---  Récuperation des informations de le fichier de configuration
+21:12:40  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:41  ---  Récuperation des informations de le fichier de configuration
+21:12:41  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:41  ---  Récuperation des informations de le fichier de configuration
+21:12:41  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:41  ---  Récuperation des informations de le fichier de configuration
+21:12:41  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:42  ---  Récuperation des informations de le fichier de configuration
+21:12:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:42  ---  Récuperation des informations de le fichier de configuration
+21:12:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:42  ---  Récuperation des informations de le fichier de configuration
+21:12:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:42  ---  Récuperation des informations de le fichier de configuration
+21:12:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:43  ---  Récuperation des informations de le fichier de configuration
+21:12:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:43  ---  Récuperation des informations de le fichier de configuration
+21:12:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:43  ---  Récuperation des informations de le fichier de configuration
+21:12:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:43  ---  Récuperation des informations de le fichier de configuration
+21:12:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:44  ---  Récuperation des informations de le fichier de configuration
+21:12:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:44  ---  Récuperation des informations de le fichier de configuration
+21:12:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:44  ---  Récuperation des informations de le fichier de configuration
+21:12:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:44  ---  Récuperation des informations de le fichier de configuration
+21:12:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:44  ---  Récuperation des informations de le fichier de configuration
+21:12:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:45  ---  Récuperation des informations de le fichier de configuration
+21:12:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:45  ---  Récuperation des informations de le fichier de configuration
+21:12:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:45  ---  Récuperation des informations de le fichier de configuration
+21:12:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:45  ---  Récuperation des informations de le fichier de configuration
+21:12:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:46  ---  Récuperation des informations de le fichier de configuration
+21:12:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:46  ---  Récuperation des informations de le fichier de configuration
+21:12:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:47  ---  Récuperation des informations de le fichier de configuration
+21:12:47  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:49  ---  Récuperation des informations de le fichier de configuration
+21:12:49  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:49  ---  Récuperation des informations de le fichier de configuration
+21:12:49  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:52  ---  Récuperation des informations de le fichier de configuration
+21:12:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:52  ---  Récuperation des informations de le fichier de configuration
+21:12:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:52  ---  Récuperation des informations de le fichier de configuration
+21:12:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:52  ---  Récuperation des informations de le fichier de configuration
+21:12:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:52  ---  Récuperation des informations de le fichier de configuration
+21:12:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:52  ---  Récuperation des informations de le fichier de configuration
+21:12:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:53  ---  Récuperation des informations de le fichier de configuration
+21:12:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:53  ---  Récuperation des informations de le fichier de configuration
+21:12:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:53  ---  Récuperation des informations de le fichier de configuration
+21:12:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:53  ---  Récuperation des informations de le fichier de configuration
+21:12:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:53  ---  Récuperation des informations de le fichier de configuration
+21:12:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:54  ---  Récuperation des informations de le fichier de configuration
+21:12:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:54  ---  Récuperation des informations de le fichier de configuration
+21:12:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:55  ---  Récuperation des informations de le fichier de configuration
+21:12:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:55  ---  Récuperation des informations de le fichier de configuration
+21:12:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:55  ---  Récuperation des informations de le fichier de configuration
+21:12:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:55  ---  Récuperation des informations de le fichier de configuration
+21:12:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:55  ---  Récuperation des informations de le fichier de configuration
+21:12:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:56  ---  Récuperation des informations de le fichier de configuration
+21:12:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:56  ---  Récuperation des informations de le fichier de configuration
+21:12:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:56  ---  Récuperation des informations de le fichier de configuration
+21:12:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:56  ---  Récuperation des informations de le fichier de configuration
+21:12:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:56  ---  Récuperation des informations de le fichier de configuration
+21:12:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:57  ---  Récuperation des informations de le fichier de configuration
+21:12:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:57  ---  Récuperation des informations de le fichier de configuration
+21:12:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:57  ---  Récuperation des informations de le fichier de configuration
+21:12:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:57  ---  Récuperation des informations de le fichier de configuration
+21:12:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:57  ---  Récuperation des informations de le fichier de configuration
+21:12:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:58  ---  Récuperation des informations de le fichier de configuration
+21:12:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:58  ---  Récuperation des informations de le fichier de configuration
+21:12:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:58  ---  Récuperation des informations de le fichier de configuration
+21:12:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:58  ---  Récuperation des informations de le fichier de configuration
+21:12:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:58  ---  Récuperation des informations de le fichier de configuration
+21:12:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:12:59  ---  Récuperation des informations de le fichier de configuration
+21:12:59  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:13:00  ---  Récuperation des informations de le fichier de configuration
+21:13:00  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:13:10  ---  Récuperation des informations de le fichier de configuration
+21:13:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:13:10  ---  Récuperation des informations de le fichier de configuration
+21:13:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:17:53  ---  Récuperation des informations de le fichier de configuration
+21:17:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:17:53  ---  Bind OK21:18:01  ---  Login valide de Damien
+21:18:27  ---  Interruption par le client : SIGINT
+21:19:22  ---  Récuperation des informations de le fichier de configuration
+21:19:22  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:19:24  ---  Récuperation des informations de le fichier de configuration
+21:19:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:19:24  ---  Récuperation des informations de le fichier de configuration
+21:19:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:19:25  ---  Récuperation des informations de le fichier de configuration
+21:19:25  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:19:25  ---  Récuperation des informations de le fichier de configuration
+21:19:25  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:30:19  ---  Récuperation des informations de le fichier de configuration
+21:30:19  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:30:19  ---  Bind OK21:30:30  ---  Login valide de Damien
+21:30:32  ---  Getting Next Departure
+21:30:57  ---  Interruption par le client : SIGINT
+21:33:05  ---  Récuperation des informations de le fichier de configuration
+21:33:05  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:33:05  ---  Bind OK21:33:28  ---  Récuperation des informations de le fichier de configuration
+21:33:28  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:33:29  ---  Récuperation des informations de le fichier de configuration
+21:33:29  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:34:22  ---  Récuperation des informations de le fichier de configuration
+21:34:22  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:34:23  ---  Récuperation des informations de le fichier de configuration
+21:34:23  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:34:24  ---  Récuperation des informations de le fichier de configuration
+21:34:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:34:24  ---  Récuperation des informations de le fichier de configuration
+21:34:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:34:24  ---  Récuperation des informations de le fichier de configuration
+21:34:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:34:24  ---  Récuperation des informations de le fichier de configuration
+21:34:24  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:34:25  ---  Récuperation des informations de le fichier de configuration
+21:34:25  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:34:32  ---  Récuperation des informations de le fichier de configuration
+21:34:32  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:34:32  ---  Bind OK21:35:27  ---  Récuperation des informations de le fichier de configuration
+21:35:27  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:30  ---  Récuperation des informations de le fichier de configuration
+21:35:30  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:31  ---  Récuperation des informations de le fichier de configuration
+21:35:31  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:32  ---  Récuperation des informations de le fichier de configuration
+21:35:32  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:33  ---  Récuperation des informations de le fichier de configuration
+21:35:33  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:34  ---  Récuperation des informations de le fichier de configuration
+21:35:34  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:34  ---  Récuperation des informations de le fichier de configuration
+21:35:34  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:34  ---  Récuperation des informations de le fichier de configuration
+21:35:34  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:34  ---  Récuperation des informations de le fichier de configuration
+21:35:34  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:35  ---  Récuperation des informations de le fichier de configuration
+21:35:35  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:35  ---  Récuperation des informations de le fichier de configuration
+21:35:35  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:35  ---  Récuperation des informations de le fichier de configuration
+21:35:35  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:35  ---  Récuperation des informations de le fichier de configuration
+21:35:35  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:35  ---  Récuperation des informations de le fichier de configuration
+21:35:35  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:35  ---  Récuperation des informations de le fichier de configuration
+21:35:35  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:36  ---  Récuperation des informations de le fichier de configuration
+21:35:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:36  ---  Récuperation des informations de le fichier de configuration
+21:35:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:36  ---  Récuperation des informations de le fichier de configuration
+21:35:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:36  ---  Récuperation des informations de le fichier de configuration
+21:35:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:36  ---  Récuperation des informations de le fichier de configuration
+21:35:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:36  ---  Récuperation des informations de le fichier de configuration
+21:35:36  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:37  ---  Récuperation des informations de le fichier de configuration
+21:35:37  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:37  ---  Récuperation des informations de le fichier de configuration
+21:35:37  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:37  ---  Récuperation des informations de le fichier de configuration
+21:35:37  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:37  ---  Récuperation des informations de le fichier de configuration
+21:35:37  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:37  ---  Récuperation des informations de le fichier de configuration
+21:35:37  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:38  ---  Récuperation des informations de le fichier de configuration
+21:35:38  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:38  ---  Récuperation des informations de le fichier de configuration
+21:35:38  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:38  ---  Récuperation des informations de le fichier de configuration
+21:35:38  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:38  ---  Récuperation des informations de le fichier de configuration
+21:35:38  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:38  ---  Récuperation des informations de le fichier de configuration
+21:35:38  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:39  ---  Récuperation des informations de le fichier de configuration
+21:35:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:39  ---  Récuperation des informations de le fichier de configuration
+21:35:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:39  ---  Récuperation des informations de le fichier de configuration
+21:35:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:39  ---  Récuperation des informations de le fichier de configuration
+21:35:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:39  ---  Récuperation des informations de le fichier de configuration
+21:35:39  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:40  ---  Récuperation des informations de le fichier de configuration
+21:35:40  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:40  ---  Récuperation des informations de le fichier de configuration
+21:35:40  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:40  ---  Récuperation des informations de le fichier de configuration
+21:35:40  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:40  ---  Récuperation des informations de le fichier de configuration
+21:35:40  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:40  ---  Récuperation des informations de le fichier de configuration
+21:35:40  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:41  ---  Récuperation des informations de le fichier de configuration
+21:35:41  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:41  ---  Récuperation des informations de le fichier de configuration
+21:35:41  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:41  ---  Récuperation des informations de le fichier de configuration
+21:35:41  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:42  ---  Récuperation des informations de le fichier de configuration
+21:35:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:42  ---  Récuperation des informations de le fichier de configuration
+21:35:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:42  ---  Récuperation des informations de le fichier de configuration
+21:35:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:42  ---  Récuperation des informations de le fichier de configuration
+21:35:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:42  ---  Récuperation des informations de le fichier de configuration
+21:35:42  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:43  ---  Récuperation des informations de le fichier de configuration
+21:35:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:43  ---  Récuperation des informations de le fichier de configuration
+21:35:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:43  ---  Récuperation des informations de le fichier de configuration
+21:35:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:43  ---  Récuperation des informations de le fichier de configuration
+21:35:43  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:44  ---  Récuperation des informations de le fichier de configuration
+21:35:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:44  ---  Récuperation des informations de le fichier de configuration
+21:35:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:44  ---  Récuperation des informations de le fichier de configuration
+21:35:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:44  ---  Récuperation des informations de le fichier de configuration
+21:35:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:44  ---  Récuperation des informations de le fichier de configuration
+21:35:44  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:45  ---  Récuperation des informations de le fichier de configuration
+21:35:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:45  ---  Récuperation des informations de le fichier de configuration
+21:35:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:45  ---  Récuperation des informations de le fichier de configuration
+21:35:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:45  ---  Récuperation des informations de le fichier de configuration
+21:35:45  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:46  ---  Récuperation des informations de le fichier de configuration
+21:35:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:46  ---  Récuperation des informations de le fichier de configuration
+21:35:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:46  ---  Récuperation des informations de le fichier de configuration
+21:35:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:46  ---  Récuperation des informations de le fichier de configuration
+21:35:46  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:47  ---  Récuperation des informations de le fichier de configuration
+21:35:47  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:47  ---  Récuperation des informations de le fichier de configuration
+21:35:47  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:47  ---  Récuperation des informations de le fichier de configuration
+21:35:47  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:47  ---  Récuperation des informations de le fichier de configuration
+21:35:47  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:48  ---  Récuperation des informations de le fichier de configuration
+21:35:48  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:48  ---  Récuperation des informations de le fichier de configuration
+21:35:48  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:48  ---  Récuperation des informations de le fichier de configuration
+21:35:48  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:49  ---  Récuperation des informations de le fichier de configuration
+21:35:49  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:49  ---  Récuperation des informations de le fichier de configuration
+21:35:49  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:50  ---  Récuperation des informations de le fichier de configuration
+21:35:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:50  ---  Récuperation des informations de le fichier de configuration
+21:35:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:50  ---  Récuperation des informations de le fichier de configuration
+21:35:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:50  ---  Récuperation des informations de le fichier de configuration
+21:35:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:50  ---  Récuperation des informations de le fichier de configuration
+21:35:50  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:51  ---  Récuperation des informations de le fichier de configuration
+21:35:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:51  ---  Récuperation des informations de le fichier de configuration
+21:35:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:51  ---  Récuperation des informations de le fichier de configuration
+21:35:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:51  ---  Récuperation des informations de le fichier de configuration
+21:35:51  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:51  ---  Récuperation des informations de le fichier de configuration
+21:35:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:52  ---  Récuperation des informations de le fichier de configuration
+21:35:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:52  ---  Récuperation des informations de le fichier de configuration
+21:35:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:52  ---  Récuperation des informations de le fichier de configuration
+21:35:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:52  ---  Récuperation des informations de le fichier de configuration
+21:35:52  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:53  ---  Récuperation des informations de le fichier de configuration
+21:35:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:53  ---  Récuperation des informations de le fichier de configuration
+21:35:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:53  ---  Récuperation des informations de le fichier de configuration
+21:35:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:53  ---  Récuperation des informations de le fichier de configuration
+21:35:53  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:54  ---  Récuperation des informations de le fichier de configuration
+21:35:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:54  ---  Récuperation des informations de le fichier de configuration
+21:35:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:54  ---  Récuperation des informations de le fichier de configuration
+21:35:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:54  ---  Récuperation des informations de le fichier de configuration
+21:35:54  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:55  ---  Récuperation des informations de le fichier de configuration
+21:35:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:55  ---  Récuperation des informations de le fichier de configuration
+21:35:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:55  ---  Récuperation des informations de le fichier de configuration
+21:35:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:55  ---  Récuperation des informations de le fichier de configuration
+21:35:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:55  ---  Récuperation des informations de le fichier de configuration
+21:35:55  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:56  ---  Récuperation des informations de le fichier de configuration
+21:35:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:56  ---  Récuperation des informations de le fichier de configuration
+21:35:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:56  ---  Récuperation des informations de le fichier de configuration
+21:35:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:56  ---  Récuperation des informations de le fichier de configuration
+21:35:56  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:57  ---  Récuperation des informations de le fichier de configuration
+21:35:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:57  ---  Récuperation des informations de le fichier de configuration
+21:35:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:57  ---  Récuperation des informations de le fichier de configuration
+21:35:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:57  ---  Récuperation des informations de le fichier de configuration
+21:35:57  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:58  ---  Récuperation des informations de le fichier de configuration
+21:35:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:58  ---  Récuperation des informations de le fichier de configuration
+21:35:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:35:58  ---  Récuperation des informations de le fichier de configuration
+21:35:58  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:36:00  ---  Récuperation des informations de le fichier de configuration
+21:36:00  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:36:01  ---  Récuperation des informations de le fichier de configuration
+21:36:01  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:36:07  ---  Récuperation des informations de le fichier de configuration
+21:36:07  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:36:07  ---  Récuperation des informations de le fichier de configuration
+21:36:07  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:36:09  ---  Récuperation des informations de le fichier de configuration
+21:36:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:36:09  ---  Récuperation des informations de le fichier de configuration
+21:36:09  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:36:10  ---  Récuperation des informations de le fichier de configuration
+21:36:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:36:10  ---  Récuperation des informations de le fichier de configuration
+21:36:10  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:36:10  ---  Bind OK21:36:17  ---  Login valide de Damien
+21:36:19  ---  Getting Next Departure
+21:36:25  ---  Getting begin loading
+21:36:29  ---  Notify End Loading
+21:36:56  ---  Getting begin loading
+21:37:00  ---  Getting begin loading
+21:37:12  ---  Getting begin loading
+21:37:34  ---  Getting begin loading
+21:37:45  ---  Getting begin loading
+21:37:49  ---  Interruption par le client : SIGINT
+21:40:30  ---  Récuperation des informations de le fichier de configuration
+21:40:30  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:40:30  ---  Bind OK21:40:38  ---  Login valide de Damien
+21:40:40  ---  Getting Next Departure
+21:40:55  ---  Interruption par le client : SIGINT
+21:40:59  ---  Récuperation des informations de le fichier de configuration
+21:40:59  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:40:59  ---  Bind OK21:41:05  ---  Login valide de Damien
+21:41:07  ---  Getting Next Departure
+21:42:37  ---  Récuperation des informations de le fichier de configuration
+21:42:37  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:42:37  ---  Bind OK21:42:42  ---  Login valide de Damien
+21:42:44  ---  Getting Next Departure
+21:43:17  ---  Getting Next Departure
+21:43:22  ---  Notify End Loading
+21:44:49  ---  Récuperation des informations de le fichier de configuration
+21:44:49  ---  Creation de la socket sur le port 50000 avec l ip localhost
+21:44:49  ---  Bind OK21:44:57  ---  Login valide de Damien
+21:44:59  ---  Getting Next Departure
+21:45:00  ---  Getting begin loading
+21:45:03  ---  Getting begin loading
+21:45:06  ---  Interruption par le client : SIGINT

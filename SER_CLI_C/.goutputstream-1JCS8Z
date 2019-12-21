@@ -1,0 +1,187 @@
+
+////!!!!!!! ok Normalement ici il faut mettre .h et non .c mais quand je le fais il y a une erreur d'edition de lien...!!!!!! A voir !!!!'
+#include "SocketsUtilities.c"
+//je teste un tru
+
+//!!!!!!!!!!!lire via fichier config, il faut creer la fonction de lecture
+#define EOC "END_OF_CONNEXION"
+#define DOC "DENY_OF_CONNEXION"
+#define PORT 50000 /* Port d'ecoute de la socket serveur */
+#define MAXSTRING 100 /* Longueur des messages */ 
+
+
+
+#define affThread(num, msg) printf("th_%s> %s\n", num, msg)
+
+
+int main()
+{
+	int hSocket, TypeMessage; /* Handle de la socket */
+	char msgClient[50];
+	char msgServeur[50];
+	struct Message * msg, retour;
+	struct sockaddr_in adresseSocket;
+	struct Liste * liste = malloc(sizeof(*liste));
+	int tailleSockaddr_in;
+	int ret; /* valeur de retour */
+	char c;
+	int cpt=0, choix = 0;
+	char login[50], MDP[50], NumeroTerm[50], dispo = ' ';
+	
+	liste = InitListe();
+	time_t timestamp = time(NULL);
+	
+	
+	hSocket = create_socket("localhost", PORT, &adresseSocket);
+	//Il faut encore tester le retour de la fonction ici)
+	
+	/* 4. Tentative de connexion */
+	tailleSockaddr_in = sizeof(struct sockaddr_in);
+	if (( ret = connect(hSocket, (struct sockaddr *)&adresseSocket, tailleSockaddr_in) )== -1) 
+	{
+		printf("Erreur sur connect de la socket %d\n", errno); 
+		switch(errno)
+		{
+			case EBADF : printf("EBADF - hsocket n'existe pas\n");
+						 break; 
+			default : printf("Erreur inconnue ?\n"); 
+		}
+		close(hSocket);
+		exit(1); 
+	}
+	else printf("Connect socket OK\n");
+	//Teste si il y a trop de client sur le serveur
+	//strcpy(msg.Msg, '\0');
+	//msg.TypeMessage = 100;
+	//retour = EnvoieMsg(msg,hSocket);
+	/* 5. Envoi d'un message client */
+	do{
+		system("cls");
+		printf("--------------------LOGIN--------------------");
+		printf("\nEntrez le nom de l'utilisateur: ");
+		gets(login);
+		printf("\nEntrez le mot de passe: ");
+		gets(MDP);
+		printf("\nEntrez le numéro de terminal: ");
+		gets(NumeroTerm);
+		strcat(login, ";");
+		strcat(login, MDP);
+		strcat(login, ";");
+		strcat(login, NumeroTerm);
+		strcpy(msg->Msg, login);
+		msg->TypeMessage = LOGIN;
+		retour = EnvoieMsg(msg, hSocket);
+		
+	}while(retour.TypeMessage != CONNECTOK);
+	printf("\nConnexion de %s-%s reussi", login, MDP);
+	 
+	do
+	{
+		system("cls");
+		printf("\n------------Ask Next Departure------------");
+		printf("\nEntrez le nom du ferry: ");
+		gets(login);
+		printf("\nEntrez la destination du ferry: ");
+		gets(MDP);
+		strcpy(msg->Msg, login);
+		strcat(msg->Msg, ";");
+		strcat(msg->Msg, MDP);
+		msg->TypeMessage = ASK_NEXT_DEPARTURE;
+		retour = EnvoieMsg(msg, hSocket);
+		switch(retour.TypeMessage){
+		
+			case DEPARTURE_KNOWN:
+				//switchcase cas a)
+				do
+				{
+					system("cls");
+					printf("\n------------Departure known------------");
+					printf("\nDemander l'embarquement-1");
+					printf("\nDemander l'autorisation de partir-2");
+					printf("\nNotifie que le ferry est partie-3");
+					switch(choix)
+					{
+						case 1:
+							msg->TypeMessage = ASK_BEGIN_LOADING;
+							break;
+						case 2:
+							msg->TypeMessage = NOTIFY_END_LOADING;
+							break;
+						case 3:
+							msg->TypeMessage = FERRY_LEAVING;
+							break;	
+					}
+					//récupérer l'heure du système
+					strftime(msg->Msg, sizeof(msg->Msg), "%X", localtime(&timestamp));
+					retour = EnvoieMsg(msg, hSocket);
+				}while(choix > 3 || choix < 1);
+				break;
+			case DEPARTURE_UNKNOWN:
+				do
+				{	
+					printf("\nInconnue, voulez-vous quitter(o)");
+					c = getchar();		
+				}while(c != 'o');
+				break;
+			case NO_FERRY:
+				//switchcase cas b)
+				do
+				{
+					system("cls");
+					printf("\n------------Departure known------------");
+					printf("\nAutoriser un ferry au terminal-1");
+					printf("\nNotifier que le ferry arrive au terminal-2");
+					printf("\nQuitter'-3");
+					switch(choix)
+					{
+						case 1:
+							msg->TypeMessage = ASK_FOR_FERRY;
+							strcpy(msg->Msg, login);
+							retour = EnvoieMsg(msg, hSocket);
+							//mettre le ferry du nom qu'il a mis au-dessus dans le f_term(F_WAITING->F_TERM)
+							break;
+						case 2:
+							system("cls");
+							printf("\n------------Ferry Arriving------------");
+							printf("\nEntrez le nom du terminal: ");
+							//gets();
+							do{
+								printf("\nEst-il disponible ? (o/n)");
+								//dispo=getchar();		
+							}while(dispo != 'o' || dispo != 'n');
+							
+							if(dispo = 'n'){
+								//strcpy(,"NA")
+								//autre champ sont vide
+							}
+							else{
+								printf("\nEntrez le nom du ferry: ");
+								//gets();
+								do{
+									printf("\nEntrez l'heure du ferry(HH:MM): ");
+									//cpt = scanf("%s:%s",);	
+								}while(cpt == -1);
+								printf("\nEntrez la destination: ");
+								//gets();
+							}
+							//concatener
+							msg->TypeMessage = FERRY_ARRIVING;
+							break;
+						case 3:
+							strcpy(msg->Msg, EOC);
+							break;	
+					}
+				
+				}while(choix > 3 || choix < 1);
+				break;
+			
+		}
+		
+	}while (strcmp(msg->Msg, EOC) && strcmp(msgServeur, DOC));
+	
+	/* 9. Fermeture de la socket */
+	close(hSocket); /* Fermeture de la socket */ printf("Socket client fermee\n");
+	printf("%d messages envoyes !", cpt);
+	
+	return 0;
+}

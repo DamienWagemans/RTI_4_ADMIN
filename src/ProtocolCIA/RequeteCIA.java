@@ -172,7 +172,7 @@ public class RequeteCIA implements Requete , Serializable{
             //lorsqu'un client se connecte, je lui donne son id et je l'incrémente
             rep = new ReponseCIA(ReponseCIA.LOGIN_OK, threadServeur.id);
             threadServeur.id++;
-           
+            
             System.out.println(adresseDistante+" / User "+ log.getUsername() + " : Login OK / "  +Thread.currentThread().getName());
             rep.EnvoieReponse(sock);
             return 1;
